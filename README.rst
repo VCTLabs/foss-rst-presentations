@@ -11,7 +11,13 @@ BYOD? - Putting The Pieces Together For An Open Source Drone
 Abstract
 --------
 
-
+This presentation will describe the open source drone architecture defined by
+the Ardupilot firmware, the MAVLink message protocol, and various supported
+autopilot devices and peripherals.  We'll cover all the current capabilitites
+and pieces of the core software stack, as well as extended support for
+different vehicle platforms, computer vision processing, cameras and image
+tags, and multi-vehicle swarms.  Airframe options alternative firmwares will 
+also be discussed, including available support for microdrones.
 
 Slides
 ------
