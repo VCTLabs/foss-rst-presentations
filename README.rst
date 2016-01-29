@@ -20,3 +20,11 @@ Slides
 
 `src/open_source_drones.rst <src/open_source_drones.rst?raw=true>`_
 
+.. note::
+   To build graphics and slides from source requires recent versions of the
+   following dependencies:
+   
+   * media-gfx/graphviz
+   * dev-python/rst2pdf
+   * dev-python/docutils
+   * sys-devel/make
