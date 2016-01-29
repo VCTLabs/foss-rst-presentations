@@ -1,0 +1,27 @@
+styles:
+    table-heading:
+        parent    : heading
+        fontName  : stdBold
+        backColor : palegreen
+    pagesetup:
+        size      : Letter
+        orientation : Landscape
+        margin-bottom : 0mm
+        margin-top    : 2mm
+        margin-left   : .5cm
+        margin-right  : 1cm
+        spacing-header : 2mm
+        spacing-footer : 0mm
+        firsttemplate : Coverpage
+    pagetemplates:
+        coverpage:
+            frames : ["0cm", "0cm", "100%", "100%"]
+            showHeader : false
+            showFooter : true
+            alignment  : TA_CENTER
+        cutepage:
+            frames : ["0", "0", "100%", "100%"]
+            showHeader : false
+            showFooter : false
+
+
