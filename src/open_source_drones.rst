@@ -6,16 +6,50 @@
    :align: center
    :width: 100%
 
-
-.. raw:: pdf
-
-   PageBreak
-
 .. contents:: Presentation Outline
 
 .. raw:: pdf
 
    PageBreak
+
+Autopilots, Copters, and Drones (oh my!)
+========================================
+
+Useful (and fun) Drone Applications
+===================================
+
+Ardupilot / APM
+===============
+
+MAVLink and MAVConn
+===================
+
+Ground Control
+==============
+
+The System Architecture
+=======================
+
+The Full Software Stack
+=======================
+
+The MAVLink Message Protocol
+============================
+
+Supported Linux and Autopilot Hardware
+======================================
+
+GPS, IMUs, Sensors, and Flight Controllers
+==========================================
+
+Vision Processing, Cameras and Metadata
+=======================================
+
+Airframes, Kits, and Why You Should Not BYO Airframe
+====================================================
+
+Other Vehicle Platforms and Firmware
+====================================
 
 Resources
 =========

@@ -10,6 +10,16 @@
     "spacing-footer": "0mm",
     "firstTemplate": "coverPage"
   },
+  "contents" : {
+    "spaceBefore" : "0",
+    "spaceAfter" : "0",
+    "leading" : "10"
+  },
+  "tableOfContents" : {
+    "spaceBefore" : "0",
+    "spaceAfter" : "0",
+    "leading" : "10"
+  },
   "pageTemplates" : {
   "coverPage": {
     "frames": [
@@ -28,3 +38,4 @@
     }
   }
 }
+
