@@ -11,15 +11,7 @@ BYOD? - Putting The Pieces Together For An Open Source Drone
 Abstract
 --------
 
-What is drone?  What is a quad-copter?  What is an autopilt, and just what is
-an IMU or a Kalman filter?  This presentation will describe the open source
-drone architecture defined by the Ardupilot firmware, the MAVLink message
-protocol, and various supported autopilot devices and peripherals.  We'll
-cover all the current capabilitites and pieces of the core software stack,
-as well as extended support for different vehicle platforms, computer
-vision processing, cameras and image tags, and multi-vehicle swarms.
-Airframe options and alternative firmwares will  also be discussed,
-including available support for microdrones.
+What is drone?  What is a quad-copter?  What is an autopilot, and just what is an IMU or a Kalman filter?  This presentation will describe the open source drone architecture defined by the Ardupilot firmware, the MAVLink message protocol, and various supported autopilot devices and peripherals.  We'll cover all the current capabilities and pieces of the core software stack, as well as extended support for different vehicle platforms, computer vision processing, cameras and image tags, and multi-vehicle swarms. Airframe options and alternative firmware will  also be discussed, including available support for micro-drones.
 
 Slides
 ------
