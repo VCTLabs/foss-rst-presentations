@@ -194,23 +194,16 @@ References and Specifications
            design for autonomous flight using onboard computer vision.
            Autonomous Robots (AURO), 2012.
    
-       The canonical MAVLink Common Message Set is common.xml, the
-       software, which defines the both the software interface and
-       the `MAVLINK Common Message Set documentation`_.
+       The canonical MAVLink Common Message Set is common.xml, the software, which defines the both the software interface and the `MAVLINK Common Message Set documentation`_.
       
-       The ArduPilot "Copter" interface variant is defined in the
-       `ArduCopter/GCS_Mavlink.cpp source file`_.
+       The ArduPilot "Copter" interface variant is defined in the `ArduCopter GCS_Mavlink.cpp`_ source file.
    
-       `Exif 2.3 Specification`_ - Exchangeable image file format for
-       digital still cameras: Exif Version 2.3, Revised on December,
-       2012, Camera & Imaging Products Association.
+       `Exif 2.3 Specification`_ - Exchangeable image file format for digital still cameras: Exif Version 2.3, Revised on December, 2012, Camera & Imaging Products Association.
    
-       `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012),
-       `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers
-       Association.
+       `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012), `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers Association.
 
 .. _MAVLINK Common Message Set documentation: https://pixhawk.ethz.ch/mavlink/
-.. _ArduCopter/GCS_Mavlink.cpp source file: https://github.com/diydrones/ardupilot/blob/Copter-3.3/ArduCopter/GCS_Mavlink.cpp
+.. _ArduCopter GCS_Mavlink.cpp: https://github.com/diydrones/ardupilot/blob/Copter-3.3/ArduCopter/GCS_Mavlink.cpp
 .. _Exif 2.3 Specification: http://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
 .. _XMP 1.0 Specification: http://www.adobe.com/products/xmp.html
 .. _Part 1: http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2014-12/XMPSpecificationPart1.pdf

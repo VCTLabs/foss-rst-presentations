@@ -8,10 +8,10 @@
   pageSetup:
 #  setting this will force everything to full page size and inore width/height
 #    size: letter-landscape
-#    width: 16cm
-#    height: 12cm
-    width: 20cm
-    height: 11.25cm
+    width: 16cm
+    height: 12cm
+#    width: 20cm
+#    height: 11.25cm
     margin-top: 2mm
     margin-bottom: 0mm
     margin-left: 0.5cm
@@ -93,7 +93,7 @@
       parent: null
       fontName: stdFont
       fontSize: 12
-      leading: 10
+      leading:12
       leftIndent: 0
       rightIndent: 0
       firstLineIndent: 0
@@ -248,6 +248,7 @@
 
     bullet-list-item:
       parent: bodytext
+      spaceAfter: 2
 
     item-list:
       parent: bodytext
@@ -312,6 +313,7 @@
       alignment: TA_CENTER
       keepWithNext: false
       spaceAfter: 10
+      backColor: skyblue
 
     subtitle:
       parent: title
@@ -322,6 +324,10 @@
       parent: heading
       fontName: stdBold
       fontSize: 165%
+      textColor: white
+      backColor: blue
+      spaceBefore: 4
+      spaceAfter: 8
 
     heading2:
       parent: heading
@@ -477,9 +483,11 @@
 
     contents:
       parent : normal
+      leading:8
 
     tableofcontents:
       parent : normal
+      leading:8
 
     code:
       parent: literal
