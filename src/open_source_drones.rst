@@ -10,10 +10,6 @@
 
 .. contents:: Presentation Outline
 
-.. raw:: pdf
-
-   FrameBreak 50
-
 Autopilots, Copters, and Drones
 ===============================
 
@@ -84,52 +80,53 @@ Ground Control
 MAVLink System Architecture
 ===========================
 
-* Full MAVLink vehicle configuration
-
-  * Linux host system and integrated machine vision/object tracking
-  * MAVLink uses multiple transport/physical layers and redundant GCS links
-  * Camera X is a third-party camera connected via serial link
+.. image:: images/mavlink_protocol_links.png
+   :align: center
+   :scale: 60%
 
 .. raw:: pdf
 
     Spacer 0 4mm
 
-.. image:: images/mavlink_protocol_links.png
-   :align: center
-   :scale: 60%
+* Full MAVLink vehicle configuration
+* Linux host system and integrated machine vision/object tracking
+* Uses multiple transport/physical layers and redundant GCS links
+* Camera X is a third-party camera connected via serial link
 
 The MAVLink Software Stack
 ==========================
+
+.. raw:: pdf
+
+    Spacer 0 4mm
+
+.. figure:: images/mavlink_stack.png
+   :scale: 75%
+
+.. raw:: pdf
+
+   Spacer 0 1cm
 
 * MAVLink "middleware" typically runs on onboard Linux host
 * Host connects to autopilot and onboard cameras
 * MAVLink supports multiple OS/IPC Mechanisms/Interfaces
 * MAVLink common messages are extended by autopilot firmware
 
+MAVLink Message Protocol Routing
+================================
+
+.. image:: images/message_routing.png
+   :scale: 30%
+
 .. raw:: pdf
 
    Spacer 0 1cm
-
-.. figure:: images/mavlink_stack.png
-   :scale: 75%
-
-
-MAVLink Message Protocol Routing
-================================
 
 * The MAVLINK broadcast message format includes action, status and command
   messages, which can be used both for onboard and offboard communication
 * Messages are identified by content instead of recipient addresses
 * Routing nodes (node 2) filter messages that belong only to a 
   particular subset (nodes 3, 4, and 5)
-
-.. raw:: pdf
-
-   Spacer 0 1cm
-
-.. image:: images/message_routing.png
-   :scale: 30%
-
 
 Open/Supported Hardware
 =======================
@@ -196,13 +193,13 @@ References and Specifications
            design for autonomous flight using onboard computer vision.
            Autonomous Robots (AURO), 2012.
    
-       The canonical MAVLink Common Message Set is common.xml, the software, which defines the both the software interface and the `MAVLINK Common Message Set documentation`_.
+       The canonical MAVLink Common Message Set is common.xml, which defines both the software interface and the `MAVLINK Common Message Set documentation`_.
       
        The ArduPilot "Copter" interface variant is defined in the `ArduCopter GCS_Mavlink.cpp`_ source file.
    
-       `Exif 2.3 Specification`_ - Exchangeable image file format for digital still cameras: Exif Version 2.3, Revised on December, 2012, Camera & Imaging Products Association.
+       The `Exif 2.3 Specification`_ - Exchangeable image file format for digital still cameras: Exif Version 2.3, Revised on December, 2012, Camera & Imaging Products Association.
    
-       `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012), `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers Association.
+       The `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012), `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers Association.
 
 .. _MAVLINK Common Message Set documentation: https://pixhawk.ethz.ch/mavlink/
 .. _ArduCopter GCS_Mavlink.cpp: https://github.com/diydrones/ardupilot/blob/Copter-3.3/ArduCopter/GCS_Mavlink.cpp

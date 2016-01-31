@@ -148,10 +148,12 @@
     toc1:
       parent: toc
       fontName: stdBold
+      leading: 9
 
     toc2:
       parent: toc
       leftIndent: 20
+      leading: 9
 
     toc3:
       parent: toc
@@ -326,8 +328,8 @@
       fontSize: 165%
       textColor: white
       backColor: blue
-      spaceBefore: 4
-      spaceAfter: 8
+#      spaceBefore: 4
+#      spaceAfter: 8
 
     heading2:
       parent: heading
@@ -483,11 +485,9 @@
 
     contents:
       parent : normal
-      leading:8
 
     tableofcontents:
       parent : normal
-      leading:8
 
     code:
       parent: literal
