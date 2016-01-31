@@ -1,6 +1,6 @@
 {"pageSetup": {
     "width": "16cm",
-    "height": "10cm",
+    "height": "12cm",
     "margin-top": "2mm",
     "margin-bottom": "0mm",
     "margin-left": ".5cm",
@@ -9,16 +9,6 @@
     "spacing-header": "2mm",
     "spacing-footer": "0mm",
     "firstTemplate": "coverPage"
-  },
-  "contents" : {
-    "spaceBefore" : "0",
-    "spaceAfter" : "0",
-    "leading" : "10"
-  },
-  "tableOfContents" : {
-    "spaceBefore" : "0",
-    "spaceAfter" : "0",
-    "leading" : "10"
   },
   "pageTemplates" : {
   "coverPage": {
@@ -38,4 +28,3 @@
     }
   }
 }
-
