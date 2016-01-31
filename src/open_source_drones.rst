@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 ##############################################################
  BYOD? - Putting The Pieces Together For An Open Source Drone
 ##############################################################
@@ -116,10 +118,10 @@ MAVLink Message Protocol Routing
 ================================
 
 * The MAVLINK broadcast message format includes action, status and command
-  messages, which can be used both for onboard and offboard communication.
-* Messages are identified by content instead of recipient addresses.
-* Routing nodes (e.g. node 2) filter messages that belong only to a 
-  particular subset (eg, nodes 3, 4, and 5).
+  messages, which can be used both for onboard and offboard communication
+* Messages are identified by content instead of recipient addresses
+* Routing nodes (node 2) filter messages that belong only to a 
+  particular subset (nodes 3, 4, and 5)
 
 .. raw:: pdf
 
@@ -214,19 +216,15 @@ References and Specifications
 License and Thanks!
 ===================
 
-| 
-|   Stephen Arnold - Gentoo / OpenEmbedded Developer
-| 
-|    * Principal Scientist / System Architect @ VCT Labs
-| 
-|     * answers _at_ vctlabs.com
-| 
-| 
-| 
-|   Presentation released under license `CC-Attribution-ShareAlike`_
-| 
+:Author: Stephen L Arnold
+:Contact: answers@vctlabs.com
+:Revision: 0.1
+:Date: 2016-01-30T23:20:06,716796648-0800
+:License: `CC-Attribution-ShareAlike`_
+:Copyright: 2016 `VCT Labs, Inc.`_
 
 .. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
+.. _VCT Labs, Inc.: http://www.vctlabs.com
 
 .. raw:: pdf
 
