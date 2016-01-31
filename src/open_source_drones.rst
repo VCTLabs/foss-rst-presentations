@@ -4,14 +4,13 @@
 
 .. image:: images/APM_copter.jpg
    :align: center
-   :width: 100%
+   :width: 95%
 
 .. contents:: Presentation Outline
 
-
 .. raw:: pdf
 
-   PageBreak
+   FrameBreak 50
 
 Autopilots, Copters, and Drones
 ===============================
@@ -194,27 +193,21 @@ References and Specifications
            **Fraundorfer, and Marc Pollefeys**.  Pixhawk: A micro aerial vehicle
            design for autonomous flight using onboard computer vision.
            Autonomous Robots (AURO), 2012.
-
-.. raw:: pdf
-
-   Spacer 0 3mm
-
-.. line-block::
-
-   The canonical MAVLink Common Message Set is common.xml, the
-   software, which defines the both the software interface and
-   the `MAVLINK Common Message Set documentation`_.
+   
+       The canonical MAVLink Common Message Set is common.xml, the
+       software, which defines the both the software interface and
+       the `MAVLINK Common Message Set documentation`_.
       
-   The ArduPilot "Copter" interface variant is defined in the
-   `ArduCopter/GCS_Mavlink.cpp source file`_.
+       The ArduPilot "Copter" interface variant is defined in the
+       `ArduCopter/GCS_Mavlink.cpp source file`_.
    
-   `Exif 2.3 Specification`_ - Exchangeable image file format for
-   digital still cameras: Exif Version 2.3, Revised on December,
-   2012, Camera & Imaging Products Association.
+       `Exif 2.3 Specification`_ - Exchangeable image file format for
+       digital still cameras: Exif Version 2.3, Revised on December,
+       2012, Camera & Imaging Products Association.
    
-   `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012),
-   `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers
-   Association.
+       `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012),
+       `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers
+       Association.
 
 .. _MAVLINK Common Message Set documentation: https://pixhawk.ethz.ch/mavlink/
 .. _ArduCopter/GCS_Mavlink.cpp source file: https://github.com/diydrones/ardupilot/blob/Copter-3.3/ArduCopter/GCS_Mavlink.cpp
@@ -231,19 +224,20 @@ License and Thanks!
 | 
 |   Stephen Arnold - Gentoo / OpenEmbedded Developer
 | 
-|     * Principal Scientist / System Architect @ VCT Labs
+|    * Principal Scientist / System Architect @ VCT Labs
 | 
 |     * answers _at_ vctlabs.com
 | 
 | 
 | 
-|   Presentation released under license CC-Attribution-ShareAlike
+|   Presentation released under license `CC-Attribution-ShareAlike`_
 | 
-|     http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
 
 .. raw:: pdf
 
-    Spacer 0 2cm
+    Spacer 0 5mm
 
 .. image:: images/cc3.png
    :align: left
