@@ -1,4 +1,4 @@
-*.pdf
-overview.svg
-navigation.svg
+src/*.pdf
+src/images/overview.svg
+src/images/navigation.svg
 
