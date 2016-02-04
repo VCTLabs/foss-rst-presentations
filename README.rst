@@ -31,7 +31,7 @@ Modern (cyber)security engineering calls for multiple layers of defense and coun
 
 
 .. _very well documented: http://iase.disa.mil/Pages/index.aspx
-.. _recent breaches: http://www.washingtonpost.com/sf/business/2015/11/05/net-of-insecurity-the-kernel-of-the-argument/
+.. _recent breaches: http://www.networkworld.com/article/3011103/security/biggest-data-breaches-of-2015.html
 .. _Gentoo Hardened: https://wiki.gentoo.org/wiki/Project:Hardened
 .. _features: https://wiki.gentoo.org/wiki/Hardened/PaX_Quickstart
 
