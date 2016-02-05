@@ -47,7 +47,7 @@ remote compromise and/or `data theft exploits`_ to "mere" `DOS annoyances`_.
 .. _serious breaches: http://www.networkworld.com/article/3011103/security/biggest-data-breaches-of-2015.html
 .. _security mechanisms: https://wiki.gentoo.org/wiki/Project:Hardened
 .. _data theft exploits: http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/
-.. _DOS annoyances: https://bugs.gentoo.org/show_bug.cgi?id=572604
+.. _DOS annoyances: http://frank2.net/grsecurity-and-cve-2016-0728-linux-kernel-refcount-overflowuse-after-free-in-keyrings/
 
 
 Slides
