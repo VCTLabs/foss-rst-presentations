@@ -31,8 +31,9 @@ Security engineers have long been pushing the idea of multiple layers of
 defense and countermeasures, offering `very well documented`_ processes and
 tools for this effort. Sadly, the software industry as a whole has long been
 failing to heed this advice, leading to `serious breaches`_ with theft of 
-sensitive data. We embedded Linux developers need to step up our security, to
-avoid our products from becoming this year's security headlines!
+sensitive data. We embedded Linux developers need to step up our security 
+game to keep today's new and bleeding-edge products from becoming tomorrow's
+security headlines!
 
 The current mainline kernel includes several access control systems that reduce
 the risk of bugs escalating into high-level security compromises, such as the
@@ -40,11 +41,12 @@ venerable SELinux (which is even enabled by default in Android 4.4 and later).
 This presentation focuses on a complementary set of `security mechanisms`_: PIE
 toolchain hardening, PAX kernel hardening, and the PAX userland tools. These
 technologies work together to demote whole classes of bugs from headline-grabbing
-remote compromise and/or data theft exploits to "mere" DOS vulnerabilities. 
+remote compromise and/or data theft exploits to "mere" `DOS annoyances`_. 
 
 .. _very well documented: http://iase.disa.mil/Pages/index.aspx
 .. _serious breaches: http://www.networkworld.com/article/3011103/security/biggest-data-breaches-of-2015.html
 .. _security mechanisms: https://wiki.gentoo.org/wiki/Project:Hardened
+.. _DOS annoyances: https://insights.sei.cmu.edu/cert/2014/02/-taking-control-of-linux-exploit-mitigations.html
 
 
 Slides
