@@ -5,13 +5,26 @@
 A repo for ELC 2016 presentation stuff; see prebuilt directory for
 PDFs or other binary output, and the source directory for source files.
 
+Speaker Bio
+-----------
+
+(Steve Arnold) Principal Scientist at VCT Labs, and also an open source developer (Gentoo / OE) and engineering consultant, science geek, and maker/hacker.  Previous speaker/volunteer at AMS, JANNAF IPC, SCaLE, and ELC (https://github.com/VCTLabs).  Gentoo and OpenEmbedded work (https://github.com/gentoo/arm  https://github.com/sarnold) plus upstream software maintenance.
+
 BYOD? - Putting The Pieces Together For An Open Source Drone
 ============================================================
 
 Abstract
 --------
 
-What is drone?  What is a quad-copter?  What is an autopilot, and just what is an IMU or a Kalman filter?  This presentation will describe the open source drone architecture defined by the Ardupilot firmware, the MAVLink message protocol, and various supported autopilot devices and peripherals.  We'll cover all the current capabilities and pieces of the core software stack, as well as extended support for different vehicle platforms, computer vision processing, cameras and image tags, and multi-vehicle swarms. Airframe options and alternative firmware will  also be discussed, including available support for micro-drones.
+What is drone?  What is a quad-copter?  What is an autopilot, and just what is
+an IMU or a Kalman filter?  This presentation will describe the open source
+drone architecture defined by the Ardupilot firmware, the MAVLink message
+protocol, and various supported autopilot devices and peripherals.  We'll
+cover all the current capabilities and pieces of the core software stack, 
+s well as extended support for different vehicle platforms, computer vision
+processing, cameras and image tags, and multi-vehicle swarms. Airframe options
+and alternative firmware will  also be discussed, including available support
+for micro-drones.
 
 Slides
 ------
@@ -21,11 +34,26 @@ Slides
 `src/open_source_drones.rst <src/open_source_drones.rst?raw=true>`_
 
 
-Demote those Security Bugs with a Hardened Profile
-==================================================
+Demote those Security Bugs with a Hardened System Profile
+=========================================================
 
-Abstract
+Short Abstract
+--------------
+
+Although the tools and documentation have been around a long time, the industry as a whole has been woefully slow at taking security engineering seriously (even more so in the embedded world). The current mainline kernel includes several access control systems that reduce the risk of bugs escalating into high-level security compromises, such as the venerable SELinux (which is enabled by default in Android 4.4 and several "enterprise" Linux distributions).  This presentation will focus on a complementary set of security mechanisms that work independently from the overlying frameworks: PIE toolchain hardening, PAX kernel hardening, and the PAX userland tools. These technologies work together to demote whole classes of bugs from headline-grabbing remote compromise and/or data theft exploits to "mere" DoS annoyances.
+
+Audience
 --------
+
+The audience for this is very broad, from developers and devops, to system admins and integrators, as well as distribution/package maintainers and power users.  Attendees will learn the hows and whys of PAX, PIE, and SSP kernel/toolchain hardening as part of a comprehensive layered security implementation.
+
+Benefits to the Ecosystem
+-------------------------
+
+This presentation will help existing and new engineers, system administrators, and technical managers better understand the scope of Linux security tools/frameworks and why a hardened baseline system profile is a critical piece of the overall puzzle. It will also hopefully encourage them, and the companies that they work for, to take a more comprehensive approach to system hardening and start shipping more resilient products.
+
+Long Abstract
+-------------
 
 Security engineers have long been pushing the idea of multiple layers of
 defense and countermeasures, offering `very well documented`_ processes and
@@ -47,7 +75,8 @@ remote compromise and/or `data theft exploits`_ to "mere" `DOS annoyances`_.
 .. _serious breaches: http://www.networkworld.com/article/3011103/security/biggest-data-breaches-of-2015.html
 .. _security mechanisms: https://wiki.gentoo.org/wiki/Project:Hardened
 .. _data theft exploits: http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/
-.. _DOS annoyances: http://frank2.net/grsecurity-and-cve-2016-0728-linux-kernel-refcount-overflowuse-after-free-in-keyrings/
+.. _DOS annoyances: https://bugs.gentoo.org/show_bug.cgi?id=572604
+
 
 
 Slides
