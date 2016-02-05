@@ -8,7 +8,7 @@ PDFs or other binary output, and the source directory for source files.
 Speaker Bio
 -----------
 
-(Steve Arnold) Principal Scientist at VCT Labs, and also an open source developer (Gentoo / OE) and engineering consultant, science geek, and maker/hacker.  Previous speaker/volunteer at AMS, JANNAF IPC, SCaLE, and ELC (https://github.com/VCTLabs).  Gentoo and OpenEmbedded work (https://github.com/gentoo/arm  https://github.com/sarnold) plus upstream software maintenance.
+(Steve Arnold) Principal Scientist at VCT Labs, and also an open source developer and mentor (Gentoo / OE / BeagleBoard.org), a contract engineering consultant, science geek, and maker/hacker.  Previous speaker/volunteer at GSoC, AMS, JANNAF IPC, SCaLE, and ELC (https://github.com/VCTLabs).  Gentoo and OpenEmbedded work (https://github.com/gentoo/arm  https://github.com/sarnold) plus upstream software maintenance.  "We make the core stuff work so others can build on it..."
 
 BYOD? - Putting The Pieces Together For An Open Source Drone
 ============================================================
