@@ -41,12 +41,13 @@ venerable SELinux (which is even enabled by default in Android 4.4 and later).
 This presentation focuses on a complementary set of `security mechanisms`_: PIE
 toolchain hardening, PAX kernel hardening, and the PAX userland tools. These
 technologies work together to demote whole classes of bugs from headline-grabbing
-remote compromise and/or data theft exploits to "mere" `DOS annoyances`_. 
+remote compromise and/or `data theft exploits`_ to "mere" `DOS annoyances`_. 
 
 .. _very well documented: http://iase.disa.mil/Pages/index.aspx
 .. _serious breaches: http://www.networkworld.com/article/3011103/security/biggest-data-breaches-of-2015.html
 .. _security mechanisms: https://wiki.gentoo.org/wiki/Project:Hardened
-.. _DOS annoyances: https://insights.sei.cmu.edu/cert/2014/02/-taking-control-of-linux-exploit-mitigations.html
+.. _data theft exploits: http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/
+.. _DOS annoyances: https://bugs.gentoo.org/show_bug.cgi?id=572604
 
 
 Slides
