@@ -137,11 +137,65 @@ GPS, IMUs, Sensors, and More
 Computer Vision, Cameras and Metadata
 =====================================
 
+.. raw:: pdf
+
+   PageBreak twoColumn
+
 Airframes and Kits
 ==================
 
 and Why You Should Not BYO Airframe
 -----------------------------------
+
+Because it's hard...
+
+.. raw:: pdf
+
+   Transition Split 1 90 I
+   
+Airframes and Kits
+==================
+
+and Why You Should Not BYO Airframe
+-----------------------------------
+
+Because it's hard...
+
+.. image:: images/1.jpg
+   :align: center
+   :width: 1500
+
+.. raw:: pdf
+
+   Transition Split 1 90 I
+
+Airframes and Kits
+==================
+
+and Why You Should Not BYO Airframe
+-----------------------------------
+
+Because it's hard...
+
+.. image:: images/1.jpg
+   :align: center
+   :width: 95%
+
+.. raw:: pdf
+
+   FrameBreak
+
+.. raw:: pdf
+
+    Spacer 0 3cm
+
+.. image:: images/2.jpg
+   :align: center
+   :width: 95%
+
+.. raw:: pdf
+
+    PageBreak cutePage
 
 Other Vehicles and Software/Firmware
 ====================================
