@@ -151,8 +151,9 @@ Because it's hard...
 
 .. raw:: pdf
 
-   Transition Split 1 90 I
-   
+   PageBreak
+   Transition Dissolve 1 90
+
 Airframes and Kits
 ==================
 
@@ -167,7 +168,8 @@ Because it's hard...
 
 .. raw:: pdf
 
-   Transition Split 1 90 I
+   PageBreak
+   Transition Wipe 1 90 I
 
 Airframes and Kits
 ==================
@@ -196,6 +198,7 @@ Because it's hard...
 .. raw:: pdf
 
     PageBreak cutePage
+    Transition Split 0
 
 Other Vehicles and Software/Firmware
 ====================================
