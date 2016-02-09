@@ -17,7 +17,7 @@ BYOD? - Putting The Pieces Together For An Open Source Drone
 Abstract
 --------
 
-What is drone?  What is a quad-copter?  What is an autopilot, and just what is
+What is a drone?  What is a quad-copter?  What is an autopilot, and just what is
 an IMU or a Kalman filter?  This presentation will describe the open source
 drone architecture defined by the Ardupilot firmware, the MAVLink message
 protocol, and various supported autopilot devices and peripherals.  We'll
