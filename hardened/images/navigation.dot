@@ -1,0 +1,25 @@
+digraph overview {
+  subgraph cluster_TIFF {
+  label="TIFF File";
+  "Tiff Header" [shape=box];
+
+  "IFD Table 0" [shape=box];
+
+  "IFD Table 1" [shape=box,style="dotted"];
+
+  "Image Data" [shape=box,label="Image Data"];
+
+  "Image Metadata" [shape=box];
+
+  "More Data" [shape=box,style=invis]
+
+  "More Metadata" [shape=box,style=invis]
+
+  "Tiff Header" -> "IFD Table 0"; 
+  "IFD Table 0" -> "Image Data"; 
+  "IFD Table 0" -> "Image Metadata"; 
+  "IFD Table 0" -> "IFD Table 1" [weight=1000,style="dotted"]; 
+  "IFD Table 1" -> "More Data" [style="dotted"]; 
+  "IFD Table 1" -> "More Metadata" [style="dotted"]; 
+  }
+}
