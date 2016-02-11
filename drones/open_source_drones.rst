@@ -9,6 +9,11 @@
    :width: 95%
 
 .. contents:: Presentation Outline
+   :depth: 1
+
+.. raw:: pdf
+
+   SetPageCounter
 
 Autopilots, Copters, and Drones
 ===============================
@@ -93,8 +98,8 @@ MAVLink System Architecture
 * Uses multiple transport/physical layers and redundant GCS links
 * Camera X is a third-party camera connected via serial link
 
-The MAVLink Software Stack
-==========================
+MAVLink Software Stack
+======================
 
 .. raw:: pdf
 

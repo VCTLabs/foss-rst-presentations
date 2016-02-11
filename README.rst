@@ -32,7 +32,7 @@ Slides
 
 `prebuilt/open_source_drones.pdf <prebuilt/open_source_drones.pdf?raw=true>`_
 
-`src/open_source_drones.rst <src/open_source_drones.rst?raw=true>`_
+`drones/open_source_drones.rst <drones/open_source_drones.rst?raw=true>`_
 
 ---------------------------------------------------------
 Demote those Security Bugs with a Hardened System Profile
@@ -83,7 +83,9 @@ remote compromise and/or `data theft exploits`_ to "mere" `DOS annoyances`_.
 Slides
 ------
 
+`prebuilt/hardened_system_profile.pdf <prebuilt/hardened_system_profile.pdf?raw=true>`_
 
+`hardened/hardened_system_profile.rst <hardened/hardened_system_profile.rst?raw=true>`_
 
 
 .. note::
