@@ -270,8 +270,21 @@ Some packages still have issues with BIND_NOW, and it has to be relaxed somewhat
   * Xorg - some drivers consist of several libraries which are co-dependent, and the modules frequently have references to modules that they load.
   * transcode - relies on lazy binding to be able to load its modules; the issues are similar to the X issues.
 
-Where Can I Get Some?
-=====================
+Manipulating PaX Flags
+======================
+
+There are five PaX protections that can be enforced (in SOFTMODE) or relaxed (in non-SOFTMODE) on a per ELF object basis: PAGEEXEC, EMULTRAP, MPROTECT, RANDMMAP and SEGMEXEC.
+
+**paxctl** - This is the traditional upstream package for setting PaX flags. It is limited only in that it sets PT_PAX only, not XATTR_PAX. It is provided by emerging sys-apps/paxctl.
+
+**getfattr / setfattr** - These are not PaX specific utilities but are general utilities to set a file's extended attributes. On Gentoo, they are provided by emerging sys-apps/attr.  Can be used to set XATTR_PAX via the user.* namespace.
+
+.. warning:: setfattr and getfattr know nothing about PaX, so they will not perform any sanity checking of field contents.  You've been warned...
+
+**paxctl-ng** - paxctl-ng is the new swiss army knife for working with PT_PAX an XATTR_PAX markings. It can be built with support for just one or the other or both types of markings.
+
+Where Can I Get Some PaX?
+=========================
 
 
 
@@ -330,11 +343,12 @@ License and Thanks!
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_,
 
-Portions © 2001–2016 `Gentoo Foundation, Inc`_
+Gentoo is a trademark of `Gentoo Foundation, Inc`_.
+Portions Copyright 2001–2016 `Gentoo Foundation, Inc`_.
 
 .. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
 .. _VCT Labs, Inc.: http://www.vctlabs.com
-.. _Gentoo Foundation, Inc: https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html
+.. _Gentoo Foundation, Inc: https://www.gentoo.org/
 
 .. raw:: pdf
 
