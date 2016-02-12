@@ -4,9 +4,9 @@
  Demote those Security Bugs with a Hardened System Profile
 ###########################################################
 
-.. image:: images/Mole_Cerberus_concept_art_in_God_of_War_II.jpg
+.. image:: images/HeraklesKerberosE701.jpg
    :align: center
-   :width: 95%
+   :width: 85%
 
 .. contents:: Presentation Outline
 
@@ -68,7 +68,7 @@ Defense-in-Depth
 
    Spacer 0 3cm
 
-*The principle of defense-in-depth is that layered security mechanisms increase security of the system as a whole. If an attack causes one security mechanism to fail, other mechanisms may still provide the necessary security to protect the system.*
+**"The principle of defense-in-depth is that layered security mechanisms increase security of the system as a whole. If an attack causes one security mechanism to fail, other mechanisms may still provide the necessary security to protect the system."**
 
 
 
@@ -76,8 +76,37 @@ Defense-in-Depth
 
    PageBreak cutePage
 
-Proactive vs. Reactive
-======================
+Layered Architecture
+====================
+
+* Authentication
+* VLANs
+* Firewalls
+* Encryption
+* Detection
+* Hosts
+
+  + Certificates
+  + DAC / MAC
+  + ACLs / CAPs
+
+Layered Architecture
+====================
+
+* Authentication
+* VLANs
+* Firewalls
+* Encryption
+* Detection
+* Hosts
+
+  + Certificates
+  + DAC / MAC
+  + ACLs / CAPs
+  + Kernel config
+
+    - **PaX**
+    - **PIE / SSP**
 
 Example: Potential 0-day Kernel Exploit
 =======================================
@@ -150,30 +179,55 @@ PaX is a patch to the Linux kernel that provides additional hardening in three i
 PaX Kernel Options - NOEXEC Features
 ====================================
 
-:NOEXEC: This option enables the protection of allocated pages of memory as non-executable if they are not part of the text segment of the running process. It is needed for PAGEEXEC, SEGMEXEC, and KERNEXEC.
-:PAGEEXEC: The kernel will protect non-executable pages based on the paging feature of the CPU. This is sometimes called "marking pages with the NX bit" in other OSes.
-:SEGMEXEC: This is like PAGEEXEC, but based on the segmentation feature of the CPU and it is controlled by the PaX -S and -s flags (only on x86).
-:EMUTRAMP: The kernel will emulate trampolines (snippets of executable code written on the fly) for processes that need them, e.g. nested functions in C and some JIT compilers.
-:MPROTECT: The kernel will prevent the introduction of new executable pages into the running process by various techniques.
-:KERNEXEC: This is the kernel land equivalent of PAGEEXEC and MPROTECT. It cannot be disabled while the kernel is running. 
+.. list-table::
+   :widths: 21 51
+
+   * - **PAX_NOEXEC**
+     - This option enables the protection of allocated pages of memory as non-executable if they are not part of the text segment of the running process. It is needed for PAGEEXEC, SEGMEXEC, and KERNEXEC.
+   * - **PAGEEXEC**
+     -  The kernel will protect non-executable pages based on the paging feature of the CPU. This is sometimes called "marking pages with the NX bit" in other OSes.
+   * - **SEGMEXEC**
+     - This is like PAGEEXEC, but based on the segmentation feature of the CPU and it is controlled by the PaX -S and -s flags (only on x86).
+   * - **EMUTRAMP**
+     - The kernel will emulate trampolines (snippets of executable code written on the fly) for processes that need them, e.g. nested functions in C and some JIT compilers.
+   * - **MPROTECT**
+     - The kernel will prevent the introduction of new executable pages into the running process by various techniques.
+   * - **KERNEXEC**
+     - This is the kernel land equivalent of PAGEEXEC and MPROTECT. It cannot be disabled while the kernel is running. 
 
 PaX Kernel Options - ASLR Features
 ==================================
 
-:PAX_ASLR: The kernel will expand the number of randomized bits for the various section of the address space. This option is needed for RANDMMAP, RANDKSTACK, and RANDUSTACK.
-:RANDMMAP: The kernel will use a randomized base address for mmap() requests that do not specify one via the MAP_FIXED variable. It is controlled by the PaX -R and -r flags.
-:RANDKSTACK: The kernel will randomize every task's kernel stack on all system calls. It cannot be disable while the kernel is running.
-:RANDUSTACK: The kernel will randomize every task's userland stack. This feature can be controlled on a per ELF binary basis by the PaX -R and -r flags.
+.. list-table::
+   :widths: 21 51
+
+   * - **PAX_ASLR**
+     - The kernel will expand the number of randomized bits for the various section of the address space. This option is needed for RANDMMAP, RANDKSTACK, and RANDUSTACK.
+   * - **RANDMMAP**
+     - The kernel will use a randomized base address for mmap() requests that do not specify one via the MAP_FIXED variable. It is controlled by the PaX -R and -r flags.
+   * - **RANDKSTACK**
+     - The kernel will randomize every task's kernel stack on all system calls. It cannot be disable while the kernel is running.
+   * - **RANDUSTACK**
+     - The kernel will randomize every task's userland stack. This feature can be controlled on a per ELF binary basis by the PaX -R and -r flags.
 
 PaX Kernel Options - Misc Features
 ==================================
 
-:STACKLEAK: The kernel will erase its stack before it returns from a system call. This feature cannot be disabled while the kernel is running.
-:UDEREF: The kernel will not de-reference userland pointers in contexts where it expects only kernel pointers. This feature cannot be disabled while the kernel is running.
-:REFCOUNT: The kernel will detect and prevent overflowing various (but not all) kinds of object reference counters.
-:USERCOPY: The kernel will enforce the size of heap objects when they are copied in either direction between the kernel and userland.
-:SIZE_OVERFLOW: The kernel recomputes expressions of function arguments marked by a size_overflow attribute with double integer precision.
-:LATENT_ENTROPY: The kernel will use early boot code to generate extra entropy, which is especially useful on embedded systems. 
+.. list-table::
+   :widths: 21 51
+
+   * - **STACKLEAK**
+     - The kernel will erase its stack before it returns from a system call. This feature cannot be disabled while the kernel is running.
+   * - **UDEREF**
+     - The kernel will not de-reference userland pointers in contexts where it expects only kernel pointers. This feature cannot be disabled while the kernel is running.
+   * - **REFCOUNT**
+     - The kernel will detect and prevent overflowing various (but not all) kinds of object reference counters.
+   * - **USERCOPY**
+     - The kernel will enforce the size of heap objects when they are copied in either direction between the kernel and userland.
+   * - **SIZE_OVERFLOW**
+     - The kernel recomputes expressions of function arguments marked by a size_overflow attribute with double integer precision.
+   * - **LATENT_ENTROPY**
+     - The kernel will use early boot code to generate extra entropy, which is especially useful on embedded systems. 
 
 Hardened Toolchain
 ==================
@@ -274,10 +328,13 @@ License and Thanks!
 :Revision: 0.1
 :Date: 2016-02-11T22:40:06,716796648-0800
 :License: `CC-Attribution-ShareAlike`_
-:Copyright: 2016 `VCT Labs, Inc.`_
+:Copyright: 2016 `VCT Labs, Inc.`_,
+
+Portions © 2001–2016 `Gentoo Foundation, Inc`_
 
 .. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
 .. _VCT Labs, Inc.: http://www.vctlabs.com
+.. _Gentoo Foundation, Inc: https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html
 
 .. raw:: pdf
 
