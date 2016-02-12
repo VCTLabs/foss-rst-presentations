@@ -92,7 +92,7 @@
     base:
       parent: null
       fontName: stdFont
-      fontSize: 12
+      fontSize: 11
       leading:12
       leftIndent: 0
       rightIndent: 0
@@ -101,7 +101,7 @@
       spaceBefore: 0
       spaceAfter: 0
       bulletFontName: stdFont
-      bulletFontSize: 12
+      bulletFontSize: 11
       bulletIndent: 0
       textColor: black
       backColor: null
