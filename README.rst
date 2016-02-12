@@ -5,14 +5,8 @@
 A repo for ELC 2016 presentation stuff; see prebuilt directory for
 PDFs or other binary output, and the source directory for source files.
 
-Speaker Bio
------------
-
-(Steve Arnold) Principal Scientist at VCT Labs, and also an open source developer and mentor (Gentoo / OE / BeagleBoard.org), a contract engineering consultant, science geek, and maker/hacker.  Previous speaker/volunteer at GSoC, AMS, JANNAF IPC, SCaLE, and ELC (https://github.com/VCTLabs).  Gentoo and OpenEmbedded work (https://github.com/gentoo/arm  https://github.com/sarnold) plus upstream software maintenance.  "We make the core stuff work so others can build on it..."
-
-------------------------------------------------------------
 BYOD? - Putting The Pieces Together For An Open Source Drone
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Abstract
 --------
@@ -34,24 +28,13 @@ Slides
 
 `drones/open_source_drones.rst <drones/open_source_drones.rst?raw=true>`_
 
----------------------------------------------------------
 Demote those Security Bugs with a Hardened System Profile
----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Short Abstract
 --------------
 
 Although the tools and documentation have been around a long time, the industry as a whole has been woefully slow at taking security engineering seriously (even more so in the embedded world). The current mainline kernel includes several access control systems that reduce the risk of bugs escalating into high-level security compromises, such as the venerable SELinux (which is enabled by default in Android 4.4 and several "enterprise" Linux distributions).  This presentation will focus on a complementary set of security mechanisms that work independently from the overlying frameworks: PIE toolchain hardening, PAX kernel hardening, and the PAX userland tools. These technologies work together to demote whole classes of bugs from headline-grabbing remote compromise and/or data theft exploits to "mere" DoS annoyances.
-
-Audience
---------
-
-The audience for this is very broad, from developers and devops, to system admins and integrators, as well as distribution/package maintainers and power users.  Attendees will learn the hows and whys of PAX, PIE, and SSP kernel/toolchain hardening as part of a comprehensive layered security implementation.
-
-Benefits to the Ecosystem
--------------------------
-
-This presentation will help existing and new engineers, system administrators, and technical managers better understand the scope of Linux security tools/frameworks and why a hardened baseline system profile is a critical piece of the overall puzzle. It will also hopefully encourage them, and the companies that they work for, to take a more comprehensive approach to system hardening and start shipping more resilient products.
 
 Long Abstract
 -------------
@@ -78,7 +61,20 @@ remote compromise and/or `data theft exploits`_ to "mere" `DOS annoyances`_.
 .. _data theft exploits: http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/
 .. _DOS annoyances: https://bugs.gentoo.org/show_bug.cgi?id=572604
 
+Audience
+--------
 
+The audience for this is very broad, from developers and devops, to system admins and integrators, as well as distribution/package maintainers and power users.  Attendees will learn the hows and whys of PAX, PIE, and SSP kernel/toolchain hardening as part of a comprehensive layered security implementation.
+
+Benefits to the Ecosystem
+-------------------------
+
+This presentation will help existing and new engineers, system administrators, and technical managers better understand the scope of Linux security tools/frameworks and why a hardened baseline system profile is a critical piece of the overall puzzle. It will also hopefully encourage them, and the companies that they work for, to take a more comprehensive approach to system hardening and start shipping more resilient products.
+
+Speaker Bio
+-----------
+
+(Steve Arnold) Principal Scientist at VCT Labs, and also an open source developer and mentor (Gentoo / OE / BeagleBoard.org), a contract engineering consultant, science geek, and maker/hacker.  Previous speaker/volunteer at GSoC, AMS, JANNAF IPC, SCaLE, and ELC (https://github.com/VCTLabs).  Gentoo and OpenEmbedded work (https://github.com/gentoo/arm  https://github.com/sarnold) plus upstream software maintenance.  "We make the core stuff work so others can build on it..."
 
 Slides
 ------
