@@ -257,7 +257,7 @@ The Gentoo Hardened project introduces a number of changes to the default behavi
 Potential Toolchain Issues and Caveats
 ======================================
 
-The SSP implementation in gcc-3.x is not perfect, and can cause problems. The SSP implementation in gcc-4.x is completely different, even so far as changing the semantics of the compiler switches (but is in general much better). The standard (non-hardened) toolchain is now enabling SSP and PIE.
+The SSP implementation in gcc-3.x is not perfect, and can cause problems. The SSP implementation in gcc-4.x is completely different, even so far as changing the semantics of the compiler switches (but is in general much better). The standard (non-hardened) toolchain is now enabling SSP (strong), RELRO, and FORTIFY.
 
 Where an application builds libraries without -fPIC, it is necessary to modify the build process to avoid -fPIE being added by the compiler (or patch to build with -fPIC).
 
@@ -265,7 +265,7 @@ Some applications have been reported to segfault when built as PIEs (mostly olde
 
 No issues found so far with switching on RELRO by default. It can make the executable image a little bit bigger (on average by half a page i.e. 2K bytes) which may be of interest for targets with extremely limited memory.
 
-Some packages still have issues with BIND_NOW, and it has to be relaxed somewhat for them:
+Some packages may still have issues with BIND_NOW, and it has to be relaxed somewhat for them:
 
   * Xorg - some drivers consist of several libraries which are co-dependent, and the modules frequently have references to modules that they load.
   * transcode - relies on lazy binding to be able to load its modules; the issues are similar to the X issues.
