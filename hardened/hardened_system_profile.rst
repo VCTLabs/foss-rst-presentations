@@ -286,22 +286,44 @@ There are five PaX protections that can be enforced (in SOFTMODE) or relaxed (in
 Where Can I Get Some PaX?
 =========================
 
+Gentoo's hardened-sources come with the Grsecurity (http://grsecurity.net/) patches, which bundle the PaX patches.
 
+::
+
+  # emerge --ask sys-kernel/hardened-sources
+
+**Gentoo Linux**
+
+  - Select the desired hardened profile, including a MAC framework (eg, SELinux, Grsec, SMACK) and rebuild your kernel, then your toolchain.  See the Hardened Project `SELinux Guide`_, the `RSBAC Guide`_, or the `Grsecurity Quickstart`_ for more information.
+
+**Other Linux**
+
+  - If only the PaX patches are desired they can be obtained in isolation from one of the Grsecurity maintainers.  Install your favorite kernel sources and download/apply the `PaX patchset`_ and look into your toolchain config. 
+ 
+Those interested in learning more about Grsecurity hardening in general should read the `Grsecurity Quickstart`_ or the `grsecurity features page`_.
+
+.. _SELinux Guide: https://wiki.gentoo.org/wiki/Project:SELinux
+.. _RSBAC Guide: https://wiki.gentoo.org/wiki/Project:RSBAC
+.. _PaX patchset: http://www.grsecurity.net/~paxguy1/
+.. _Grsecurity Quickstart: https://wiki.gentoo.org/wiki/Hardened/Grsecurity2_Quickstart
+.. _grsecurity features page: http://en.wikibooks.org/wiki/Grsecurity/Appendix/Grsecurity_and_PaX_Configuration_Options
 
 Some Hardened Resources
 =======================
 
-Hardened Project
+Gentoo Hardened Project
 
 * https://wiki.gentoo.org/wiki/Hardened/Introduction_to_Hardened_Gentoo
 * https://wiki.gentoo.org/wiki/Hardened/PaX_Quickstart
 * https://wiki.gentoo.org/wiki/Hardened/Toolchain
 * https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
+* https://wiki.gentoo.org/wiki/Hardened/Overview_of_POSIX_capabilities
 
-Subproject Starters
+Gentoo Hardened Subproject Starters
 
 * https://wiki.gentoo.org/wiki/Project:RSBAC
 * https://wiki.gentoo.org/wiki/Project:SELinux
+* https://wiki.gentoo.org/wiki/Project:Integrity
 
 Other Resources
 
@@ -357,4 +379,5 @@ Portions Copyright 2001–2016 `Gentoo Foundation, Inc`_.
 .. image:: images/cc3.png
    :align: left
    :width: .5in
+
 
