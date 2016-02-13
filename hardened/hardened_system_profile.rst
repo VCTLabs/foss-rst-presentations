@@ -257,7 +257,7 @@ The Gentoo Hardened project introduces a number of changes to the default behavi
 Potential Toolchain Issues and Caveats
 ======================================
 
-The SSP implementation in gcc-3.x is not perfect, and can cause problems. The SSP implementation in gcc-4.x is completely different, even so far as changing the semantics of the compiler switches (but is in general much better). The standard (non-hardened) toolchain is now enabling SSP (strong), RELRO, and FORTIFY.
+The SSP implementation in gcc-3.x is not perfect, and SSP implementation in gcc-4.x/5.x is completely different (switches are also different, but is in general much better). The standard (non-hardened) toolchain is now enabling SSP (strong), RELRO, and FORTIFY (default PIE and SSP are in git for gcc 6.0).
 
 Where an application builds libraries without -fPIC, it is necessary to modify the build process to avoid -fPIE being added by the compiler (or patch to build with -fPIC).
 
