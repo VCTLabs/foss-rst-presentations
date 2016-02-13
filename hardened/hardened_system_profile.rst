@@ -359,9 +359,10 @@ License and Thanks!
 ===================
 
 :Author: Stephen L Arnold
+:FOSS Hat: Gentoo Linux Developer
 :Contact: answers@vctlabs.com
-:Revision: 0.1
-:Date: 2016-02-11T22:40:06,716796648-0800
+:Revision: 0.2
+:Date: 2016-02-13T18:19:06,716796648-0800
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_,
 
