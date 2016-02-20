@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-###########################################################
- Demote those Security Bugs with a Hardened System Profile
-###########################################################
+###############################################################
+ Demote those IoT Security Bugs with a Hardened System Profile
+###############################################################
 
 .. image:: images/HeraklesKerberosE701.jpg
    :align: center
