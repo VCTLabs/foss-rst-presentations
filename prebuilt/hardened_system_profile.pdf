@@ -287,19 +287,19 @@ endobj
   /Trans <<  >> /Type /Page >>
 endobj
 87 0 obj
-<< /A << /S /URI /Type /Action /URI (mailto:answers@vctlabs.com) >> /Border [ 0 0 0 ] /Rect [ 111.2126 261.6639 221.3996 273.6639 ] /Subtype /Link /Type /Annot >>
+<< /A << /S /URI /Type /Action /URI (mailto:answers@vctlabs.com) >> /Border [ 0 0 0 ] /Rect [ 111.2126 246.6639 221.3996 258.6639 ] /Subtype /Link /Type /Annot >>
 endobj
 88 0 obj
-<< /A << /S /URI /Type /Action /URI (http://creativecommons.org/licenses/by-sa/3.0/) >> /Border [ 0 0 0 ] /Rect [ 111.2126 216.6639 237.1296 228.6639 ] /Subtype /Link /Type /Annot >>
+<< /A << /S /URI /Type /Action /URI (http://creativecommons.org/licenses/by-sa/3.0/) >> /Border [ 0 0 0 ] /Rect [ 111.2126 201.6639 237.1296 213.6639 ] /Subtype /Link /Type /Annot >>
 endobj
 89 0 obj
-<< /A << /S /URI /Type /Action /URI (http://www.vctlabs.com) >> /Border [ 0 0 0 ] /Rect [ 138.7346 202.0389 211.4886 214.0389 ] /Subtype /Link /Type /Annot >>
+<< /A << /S /URI /Type /Action /URI (http://www.vctlabs.com) >> /Border [ 0 0 0 ] /Rect [ 138.7346 187.0389 211.4886 199.0389 ] /Subtype /Link /Type /Annot >>
 endobj
 90 0 obj
-<< /A << /S /URI /Type /Action /URI (https://www.gentoo.org/) >> /Border [ 0 0 0 ] /Rect [ 146.9145 181.0389 262.9269 193.0389 ] /Subtype /Link /Type /Annot >>
+<< /A << /S /URI /Type /Action /URI (https://www.gentoo.org/) >> /Border [ 0 0 0 ] /Rect [ 146.9145 166.0389 262.9269 178.0389 ] /Subtype /Link /Type /Annot >>
 endobj
 91 0 obj
-<< /A << /S /URI /Type /Action /URI (https://www.gentoo.org/) >> /Border [ 0 0 0 ] /Rect [ 20.17323 169.0389 135.1342 181.0389 ] /Subtype /Link /Type /Annot >>
+<< /A << /S /URI /Type /Action /URI (https://www.gentoo.org/) >> /Border [ 0 0 0 ] /Rect [ 20.17323 154.0389 135.1342 166.0389 ] /Subtype /Link /Type /Annot >>
 endobj
 92 0 obj
 << /BitsPerComponent 8 /ColorSpace /DeviceRGB /Filter [ /ASCII85Decode /FlateDecode ] /Height 31 /Length 1260 /Subtype /Image 
@@ -315,8 +315,8 @@ endobj
 << /Outlines 96 0 R /PageLabels 134 0 R /PageMode /UseNone /Pages 114 0 R /Type /Catalog >>
 endobj
 95 0 obj
-<< /Author () /CreationDate (D:20160212001420+08'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
-  /Title (Demote those Security Bugs with a Hardened System Profile) >>
+<< /Author () /CreationDate (D:20160220122836+08'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+  /Title (Demote those IoT Security Bugs with a Hardened System Profile) >>
 endobj
 96 0 obj
 << /Count 17 /First 97 0 R /Last 113 0 R /Type /Outlines >>
@@ -377,13 +377,13 @@ endobj
   57 0 R 58 0 R 59 0 R 60 0 R 62 0 R 71 0 R 83 0 R 86 0 R 93 0 R ] /Type /Pages >>
 endobj
 115 0 obj
-<< /Length 378 >>
+<< /Length 382 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
 1 0 0 1 20.17323 275.2989 cm
 q
-BT 1 0 0 1 0 27.72 Tm 33.92441 0 Td 23.76 TL /F2 19.8 Tf .545098 0 0 rg (Demote those Security Bugs with a) Tj T* 48.4011 0 Td (Hardened System Profile) Tj T* -82.32551 0 Td ET
+BT 1 0 0 1 0 27.72 Tm 16.32221 0 Td 23.76 TL /F2 19.8 Tf .545098 0 0 rg (Demote those IoT Security Bugs with a) Tj T* 66.0033 0 Td (Hardened System Profile) Tj T* -82.32551 0 Td ET
 Q
 Q
 q
@@ -2932,7 +2932,7 @@ Q
 endstream
 endobj
 128 0 obj
-<< /Length 2970 >>
+<< /Length 2989 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -2949,7 +2949,7 @@ q
 1 0 0 1 20.17323 247.0389 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 37 Tm /F1 11 Tf 12 TL .848719 Tw (The SSP implementation in gcc-3.x is not perfect, and can cause problems. The) Tj T* 0 Tw 1.537875 Tw (SSP implementation in gcc-4.x is completely different, even so far as changing) Tj T* 0 Tw 3.041385 Tw (the semantics of the compiler switches \(but is in general much better\). The) Tj T* 0 Tw (standard \(non-hardened\) toolchain is now enabling SSP and PIE.) Tj T* ET
+BT 1 0 0 1 0 37 Tm /F1 11 Tf 12 TL 2.037875 Tw (The SSP implementation in gcc-3.x is not perfect, and SSP implementation in) Tj T* 0 Tw 1.705875 Tw (gcc-4.x/5.x is completely different \(switches are also different, but is in general) Tj T* 0 Tw 4.051514 Tw (much better\). The standard \(non-hardened\) toolchain is now enabling SSP) Tj T* 0 Tw (\(strong\), RELRO, and FORTIFY \(default PIE and SSP are in git for gcc 6.0\).) Tj T* ET
 Q
 Q
 q
@@ -2977,7 +2977,7 @@ q
 1 0 0 1 20.17323 103.0389 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 13 Tm /F1 11 Tf 12 TL 2.888302 Tw (Some packages still have issues with BIND_NOW, and it has to be relaxed) Tj T* 0 Tw (somewhat for them:) Tj T* ET
+BT 1 0 0 1 0 13 Tm /F1 11 Tf 12 TL .832509 Tw (Some packages may still have issues with BIND_NOW, and it has to be relaxed) Tj T* 0 Tw (somewhat for them:) Tj T* ET
 Q
 Q
 q
@@ -3767,7 +3767,7 @@ Q
 endstream
 endobj
 133 0 obj
-<< /Length 2626 >>
+<< /Length 2938 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -3812,6 +3812,27 @@ q
 1 0 0 1 6 3 cm
 q
 0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F2 11 Tf 12 TL 18.64437 0 Td (FOSS Hat:) Tj T* -18.64437 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Gentoo Linux Developer) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 244.0389 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
 BT 1 0 0 1 0 1 Tm /F2 11 Tf 12 TL 28.43437 0 Td (Contact:) Tj T* -28.43437 0 Td ET
 Q
 Q
@@ -3827,7 +3848,7 @@ q
 Q
 Q
 q
-1 0 0 1 20.17323 244.0389 cm
+1 0 0 1 20.17323 229.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -3841,14 +3862,14 @@ q
 1 0 0 1 91.03937 3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (0.1) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (0.2) Tj T* ET
 Q
 Q
 q
 Q
 Q
 q
-1 0 0 1 20.17323 229.0389 cm
+1 0 0 1 20.17323 214.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -3862,14 +3883,14 @@ q
 1 0 0 1 91.03937 3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (2016-02-11T22:40:06,716796648-0800) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (2016-02-13T18:19:06,716796648-0800) Tj T* ET
 Q
 Q
 q
 Q
 Q
 q
-1 0 0 1 20.17323 214.0389 cm
+1 0 0 1 20.17323 199.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -3891,7 +3912,7 @@ q
 Q
 Q
 q
-1 0 0 1 20.17323 199.0389 cm
+1 0 0 1 20.17323 184.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -3911,16 +3932,16 @@ q
 Q
 Q
 q
-1 0 0 1 20.17323 169.0389 cm
+1 0 0 1 20.17323 154.0389 cm
 q
 BT 1 0 0 1 0 13 Tm .525662 Tw 12 TL /F1 11 Tf 0 0 0 rg (Gentoo is a trademark of ) Tj 0 0 .501961 rg (Gentoo Foundation, Inc) Tj 0 0 0 rg (. Portions Copyright 2001\2262016) Tj T* 0 Tw 0 0 .501961 rg (Gentoo Foundation, Inc) Tj 0 0 0 rg (.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 20.17323 154.8657 cm
+1 0 0 1 20.17323 139.8657 cm
 Q
 q
-1 0 0 1 20.17323 136.1839 cm
+1 0 0 1 20.17323 121.1839 cm
 q
 36 0 0 12.68182 0 0 cm
 /FormXob.26ba6b8f20a37004eaa195cb96995fef Do
@@ -4090,69 +4111,69 @@ xref
 0000095960 00000 n
 0000096283 00000 n
 0000096394 00000 n
-0000096662 00000 n
-0000096741 00000 n
-0000096878 00000 n
-0000097012 00000 n
-0000097151 00000 n
-0000097291 00000 n
-0000097451 00000 n
-0000097589 00000 n
-0000097730 00000 n
-0000097887 00000 n
-0000098042 00000 n
-0000098197 00000 n
-0000098336 00000 n
-0000098495 00000 n
-0000098638 00000 n
-0000098784 00000 n
-0000098928 00000 n
-0000099086 00000 n
-0000099212 00000 n
-0000099407 00000 n
-0000099842 00000 n
-0000104650 00000 n
-0000110636 00000 n
-0000111694 00000 n
-0000114939 00000 n
-0000119115 00000 n
-0000124214 00000 n
-0000127536 00000 n
-0000130467 00000 n
-0000133649 00000 n
-0000135977 00000 n
-0000139014 00000 n
-0000142371 00000 n
-0000145399 00000 n
-0000147852 00000 n
-0000151058 00000 n
-0000156145 00000 n
-0000159094 00000 n
-0000161778 00000 n
-0000162025 00000 n
-0000162063 00000 n
-0000162095 00000 n
-0000162133 00000 n
-0000162171 00000 n
-0000162209 00000 n
-0000162247 00000 n
-0000162285 00000 n
-0000162323 00000 n
-0000162361 00000 n
-0000162399 00000 n
-0000162437 00000 n
-0000162476 00000 n
-0000162515 00000 n
-0000162554 00000 n
-0000162593 00000 n
-0000162632 00000 n
-0000162671 00000 n
-0000162710 00000 n
+0000096666 00000 n
+0000096745 00000 n
+0000096882 00000 n
+0000097016 00000 n
+0000097155 00000 n
+0000097295 00000 n
+0000097455 00000 n
+0000097593 00000 n
+0000097734 00000 n
+0000097891 00000 n
+0000098046 00000 n
+0000098201 00000 n
+0000098340 00000 n
+0000098499 00000 n
+0000098642 00000 n
+0000098788 00000 n
+0000098932 00000 n
+0000099090 00000 n
+0000099216 00000 n
+0000099411 00000 n
+0000099850 00000 n
+0000104658 00000 n
+0000110644 00000 n
+0000111702 00000 n
+0000114947 00000 n
+0000119123 00000 n
+0000124222 00000 n
+0000127544 00000 n
+0000130475 00000 n
+0000133657 00000 n
+0000135985 00000 n
+0000139022 00000 n
+0000142379 00000 n
+0000145426 00000 n
+0000147879 00000 n
+0000151085 00000 n
+0000156172 00000 n
+0000159121 00000 n
+0000162117 00000 n
+0000162364 00000 n
+0000162402 00000 n
+0000162434 00000 n
+0000162472 00000 n
+0000162510 00000 n
+0000162548 00000 n
+0000162586 00000 n
+0000162624 00000 n
+0000162662 00000 n
+0000162700 00000 n
+0000162738 00000 n
+0000162776 00000 n
+0000162815 00000 n
+0000162854 00000 n
+0000162893 00000 n
+0000162932 00000 n
+0000162971 00000 n
+0000163010 00000 n
+0000163049 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com)
- [(\357\020\014\316\334a\035\310=\021\030\030\344\274\177\014) (\357\020\014\316\334a\035\310=\021\030\030\344\274\177\014)]
+ [(*CQs\357\233\2223\323\006\236.e\\F\250) (*CQs\357\233\2223\323\006\236.e\\F\250)]
  /Info 95 0 R /Root 94 0 R /Size 154 >>
 startxref
-162749
+163088
 %%EOF
