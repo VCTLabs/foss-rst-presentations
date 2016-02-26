@@ -229,6 +229,19 @@ PaX Kernel Options - Misc Features
    * - **LATENT_ENTROPY**
      - The kernel will use early boot code to generate extra entropy, which is especially useful on embedded systems. 
 
+Manipulating PaX Flags
+======================
+
+There are five PaX protections that can be enforced (in SOFTMODE) or relaxed (in non-SOFTMODE) on a per ELF object basis: PAGEEXEC, EMULTRAP, MPROTECT, RANDMMAP and SEGMEXEC.
+
+**paxctl** - This is the traditional upstream package for setting PaX flags. It is limited only in that it sets PT_PAX only, not XATTR_PAX. It is provided by emerging sys-apps/paxctl.
+
+**getfattr / setfattr** - These are not PaX specific utilities but are general utilities to set a file's extended attributes. On Gentoo, they are provided by emerging sys-apps/attr.  Can be used to set XATTR_PAX via the user.* namespace.
+
+.. warning:: setfattr and getfattr know nothing about PaX, so they will not perform any sanity checking of field contents.  You've been warned...
+
+**paxctl-ng** - paxctl-ng is the new swiss army knife for working with PT_PAX an XATTR_PAX markings. It can be built with support for just one or the other or both types of markings.
+
 Hardened Toolchain
 ==================
 
@@ -270,18 +283,21 @@ Some packages may still have issues with BIND_NOW, and it has to be relaxed some
   * Xorg - some drivers consist of several libraries which are co-dependent, and the modules frequently have references to modules that they load.
   * transcode - relies on lazy binding to be able to load its modules; the issues are similar to the X issues.
 
-Manipulating PaX Flags
-======================
+Hardened Issues and The State of PaX
+====================================
 
-There are five PaX protections that can be enforced (in SOFTMODE) or relaxed (in non-SOFTMODE) on a per ELF object basis: PAGEEXEC, EMULTRAP, MPROTECT, RANDMMAP and SEGMEXEC.
+PT_PAX flags are still valid (and the default) but are being phased out
 
-**paxctl** - This is the traditional upstream package for setting PaX flags. It is limited only in that it sets PT_PAX only, not XATTR_PAX. It is provided by emerging sys-apps/paxctl.
+* Current version of binutils/bfd linker have been patched, but that patch will go away
+* The gold linker (required for LTO plugin) does not support PT_PAX
 
-**getfattr / setfattr** - These are not PaX specific utilities but are general utilities to set a file's extended attributes. On Gentoo, they are provided by emerging sys-apps/attr.  Can be used to set XATTR_PAX via the user.* namespace.
+XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support)
 
-.. warning:: setfattr and getfattr know nothing about PaX, so they will not perform any sanity checking of field contents.  You've been warned...
+* Default PT flags will migrate to empty XT flags (since kernel falls back to default)
+* Only binaries with non-default flags will have XT flags marked
+* Libs needing less PaX enforcement will need their flags "back-ported" to the binaries that use it
 
-**paxctl-ng** - paxctl-ng is the new swiss army knife for working with PT_PAX an XATTR_PAX markings. It can be built with support for just one or the other or both types of markings.
+Use cases such as a hardened build server may need config tweaks and/or twiddling of PaX flags on things liked qemu binaries used during the build (eg, OpenEmbedded)
 
 Where Can I Get Some PaX?
 =========================
