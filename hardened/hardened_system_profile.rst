@@ -40,7 +40,7 @@ Context: Operational Environment
 * Reduce Exposure
 
   + Compartmentalization
-  + Least Privelege
+  + Least Privilege
   + Insecure-Bootstrap Principle
 
 * Input Validation
