@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
 ###############################################################
- Demote those IoT Security Bugs with a Hardened System Profile
+ Squash Those IoT Security Bugs with a Hardened System Profile
 ###############################################################
 
 .. image:: images/HeraklesKerberosE701.jpg
@@ -87,8 +87,9 @@ Layered Architecture
 * Hosts
 
   + Certificates
-  + DAC / MAC
   + ACLs / CAPs
+  + Mandatory / Role-based Access Controls
+  + Discretionary Access Controls
 
 Layered Architecture
 ====================
@@ -101,8 +102,9 @@ Layered Architecture
 * Hosts
 
   + Certificates
-  + DAC / MAC
   + ACLs / CAPs
+  + Mandatory / Role-based Access Controls
+  + Discretionary Access Controls
   + Kernel config
 
     - **PaX**
