@@ -325,8 +325,8 @@ endobj
 << /Outlines 99 0 R /PageLabels 139 0 R /PageMode /UseNone /Pages 118 0 R /Type /Catalog >>
 endobj
 98 0 obj
-<< /Author () /CreationDate (D:20160226130602+08'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
-  /Title (Demote those IoT Security Bugs with a Hardened System Profile) >>
+<< /Author () /CreationDate (D:20160308183047+08'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+  /Title (Squash Those IoT Security Bugs with a Hardened System Profile) >>
 endobj
 99 0 obj
 << /Count 18 /First 100 0 R /Last 117 0 R /Type /Outlines >>
@@ -390,13 +390,13 @@ endobj
   59 0 R 60 0 R 62 0 R 63 0 R 64 0 R 65 0 R 74 0 R 86 0 R 89 0 R 96 0 R ] /Type /Pages >>
 endobj
 119 0 obj
-<< /Length 382 >>
+<< /Length 381 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
 1 0 0 1 20.17323 275.2989 cm
 q
-BT 1 0 0 1 0 27.72 Tm 16.32221 0 Td 23.76 TL /F2 19.8 Tf .545098 0 0 rg (Demote those IoT Security Bugs with a) Tj T* 66.0033 0 Td (Hardened System Profile) Tj T* -82.32551 0 Td ET
+BT 1 0 0 1 0 27.72 Tm 14.11451 0 Td 23.76 TL /F2 19.8 Tf .545098 0 0 rg (Squash Those IoT Security Bugs with a) Tj T* 68.211 0 Td (Hardened System Profile) Tj T* -82.32551 0 Td ET
 Q
 Q
 q
@@ -1083,7 +1083,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Least Privelege) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Least Privilege) Tj T* ET
 Q
 Q
 q
@@ -1196,7 +1196,7 @@ Q
 endstream
 endobj
 123 0 obj
-<< /Length 3187 >>
+<< /Length 3532 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -1336,25 +1336,49 @@ q
 1 0 0 1 20.17323 215.0389 cm
 Q
 q
-1 0 0 1 20.17323 153.0389 cm
+1 0 0 1 20.17323 137.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 6 47 cm
+1 0 0 1 6 63 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL 10.15 0 Td (\177) Tj T* -10.15 0 Td ET
 Q
 Q
 q
-1 0 0 1 23 47 cm
+1 0 0 1 23 63 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Hosts) Tj T* ET
 Q
 Q
 q
-1 0 0 1 23 45 cm
+1 0 0 1 23 61 cm
+Q
+q
+1 0 0 1 23 61 cm
+Q
+q
+1 0 0 1 23 49 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL 10.15 0 Td (\177) Tj T* -10.15 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Certificates) Tj T* ET
+Q
+Q
+q
+Q
 Q
 q
 1 0 0 1 23 45 cm
@@ -1374,7 +1398,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Certificates) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (ACLs / CAPs) Tj T* ET
 Q
 Q
 q
@@ -1398,7 +1422,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (DAC / MAC) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Mandatory / Role-based Access Controls) Tj T* ET
 Q
 Q
 q
@@ -1422,7 +1446,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (ACLs / CAPs) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Discretionary Access Controls) Tj T* ET
 Q
 Q
 q
@@ -1435,16 +1459,16 @@ q
 Q
 Q
 q
-1 0 0 1 20.17323 149.0389 cm
+1 0 0 1 20.17323 133.0389 cm
 Q
 q
-1 0 0 1 20.17323 149.0389 cm
+1 0 0 1 20.17323 133.0389 cm
 Q
  
 endstream
 endobj
 124 0 obj
-<< /Length 4118 >>
+<< /Length 4466 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -1584,25 +1608,49 @@ q
 1 0 0 1 20.17323 215.0389 cm
 Q
 q
-1 0 0 1 20.17323 103.0389 cm
+1 0 0 1 20.17323 87.0389 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 6 97 cm
+1 0 0 1 6 113 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL 10.15 0 Td (\177) Tj T* -10.15 0 Td ET
 Q
 Q
 q
-1 0 0 1 23 97 cm
+1 0 0 1 23 113 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Hosts) Tj T* ET
 Q
 Q
 q
-1 0 0 1 23 95 cm
+1 0 0 1 23 111 cm
+Q
+q
+1 0 0 1 23 111 cm
+Q
+q
+1 0 0 1 23 99 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL 10.15 0 Td (\177) Tj T* -10.15 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Certificates) Tj T* ET
+Q
+Q
+q
+Q
 Q
 q
 1 0 0 1 23 95 cm
@@ -1622,7 +1670,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Certificates) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (ACLs / CAPs) Tj T* ET
 Q
 Q
 q
@@ -1646,7 +1694,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (DAC / MAC) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Mandatory / Role-based Access Controls) Tj T* ET
 Q
 Q
 q
@@ -1670,7 +1718,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (ACLs / CAPs) Tj T* ET
+BT 1 0 0 1 0 1 Tm /F1 11 Tf 12 TL (Discretionary Access Controls) Tj T* ET
 Q
 Q
 q
@@ -1761,10 +1809,10 @@ q
 Q
 Q
 q
-1 0 0 1 20.17323 99.0389 cm
+1 0 0 1 20.17323 83.0389 cm
 Q
 q
-1 0 0 1 20.17323 99.0389 cm
+1 0 0 1 20.17323 83.0389 cm
 Q
  
 endstream
@@ -4338,51 +4386,51 @@ xref
 0000099822 00000 n
 0000099948 00000 n
 0000100150 00000 n
-0000100589 00000 n
-0000105668 00000 n
-0000111654 00000 n
-0000112712 00000 n
-0000115957 00000 n
-0000120133 00000 n
-0000125232 00000 n
-0000128554 00000 n
-0000131485 00000 n
-0000134667 00000 n
-0000136995 00000 n
-0000140032 00000 n
-0000142485 00000 n
-0000145842 00000 n
-0000148889 00000 n
-0000152086 00000 n
-0000155292 00000 n
-0000160379 00000 n
-0000163328 00000 n
-0000166324 00000 n
-0000166582 00000 n
-0000166620 00000 n
-0000166652 00000 n
-0000166690 00000 n
-0000166728 00000 n
-0000166766 00000 n
-0000166804 00000 n
-0000166842 00000 n
-0000166880 00000 n
-0000166918 00000 n
-0000166956 00000 n
-0000166994 00000 n
-0000167033 00000 n
-0000167072 00000 n
-0000167111 00000 n
-0000167150 00000 n
-0000167189 00000 n
-0000167228 00000 n
-0000167267 00000 n
-0000167306 00000 n
+0000100588 00000 n
+0000105667 00000 n
+0000111653 00000 n
+0000112711 00000 n
+0000116301 00000 n
+0000120825 00000 n
+0000125924 00000 n
+0000129246 00000 n
+0000132177 00000 n
+0000135359 00000 n
+0000137687 00000 n
+0000140724 00000 n
+0000143177 00000 n
+0000146534 00000 n
+0000149581 00000 n
+0000152778 00000 n
+0000155984 00000 n
+0000161071 00000 n
+0000164020 00000 n
+0000167016 00000 n
+0000167274 00000 n
+0000167312 00000 n
+0000167344 00000 n
+0000167382 00000 n
+0000167420 00000 n
+0000167458 00000 n
+0000167496 00000 n
+0000167534 00000 n
+0000167572 00000 n
+0000167610 00000 n
+0000167648 00000 n
+0000167686 00000 n
+0000167725 00000 n
+0000167764 00000 n
+0000167803 00000 n
+0000167842 00000 n
+0000167881 00000 n
+0000167920 00000 n
+0000167959 00000 n
+0000167998 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com)
- [(>P\000\210N\\\343@\3035-\237\214\036h\321) (>P\000\210N\\\343@\3035-\237\214\036h\321)]
+ [(2\212\276\231\022\305\265\011q\177\331m\356v\360\371) (2\212\276\231\022\305\265\011q\177\331m\356v\360\371)]
  /Info 98 0 R /Root 97 0 R /Size 160 >>
 startxref
-167345
+168037
 %%EOF
