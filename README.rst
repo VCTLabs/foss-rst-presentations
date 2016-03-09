@@ -28,7 +28,7 @@ Slides
 
 `drones/open_source_drones.rst <drones/open_source_drones.rst?raw=true>`_
 
-Demote those IoT Security Bugs with a Hardened System Profile
+Squash Those IoT Security Bugs with a Hardened System Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Short Abstract
