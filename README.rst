@@ -5,7 +5,7 @@
 A repo for FOSS presentation stuff in `reStructuredText`_; see prebuilt directory for
 PDFs or other binary output, and the source directory for source files.
 
-.. _: http://docutils.sourceforge.net/rst.html
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
 
 BYOD? - Putting The Pieces Together For An Open Source Drone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
