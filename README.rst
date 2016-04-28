@@ -1,9 +1,11 @@
-==============================
- ELC 2016 San Diego Abstracts
-==============================
+==================================
+ FOSS Presentations and Abstracts
+==================================
 
-A repo for ELC 2016 presentation stuff; see prebuilt directory for
+A repo for FOSS presentation stuff in `reStructuredText`_; see prebuilt directory for
 PDFs or other binary output, and the source directory for source files.
+
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
 
 BYOD? - Putting The Pieces Together For An Open Source Drone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
