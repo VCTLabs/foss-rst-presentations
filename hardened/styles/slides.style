@@ -34,6 +34,7 @@
         showHeader : false
         showFooter : true
         alignment  : TA_CENTER
+#        background : images/gentoo-larry-bg-4-3-test.png
 
     emptyPage:
         frames: []

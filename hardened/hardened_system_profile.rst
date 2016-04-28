@@ -288,18 +288,18 @@ Some packages may still have issues with BIND_NOW, and it has to be relaxed some
 Hardened Issues and The State of PaX
 ====================================
 
-PT_PAX flags are still valid (and the default) but are being phased out
+PT_PAX flags are still valid (and the default) but are being phased out.
 
 * Current version of binutils/bfd linker have been patched, but that patch will go away
 * The gold linker (required for LTO plugin) does not support PT_PAX
 
-XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support)
+XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support).
 
 * Default PT flags will migrate to empty XT flags (since kernel falls back to default)
 * Only binaries with non-default flags will have XT flags marked
 * Libs needing less PaX enforcement will need their flags "back-ported" to the binaries that use it
 
-Use cases such as a hardened build server may need config tweaks and/or twiddling of PaX flags on things liked qemu binaries used during the build (eg, OpenEmbedded)
+Use cases such as a hardened build server may need config tweaks and/or twiddling of PaX flags on things like qemu binaries used during the build (eg, OpenEmbedded).
 
 Where Can I Get Some PaX?
 =========================
