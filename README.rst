@@ -2,26 +2,32 @@
  FOSS Presentations and Abstracts
 ==================================
 
-A repo for FOSS presentation stuff in `reStructuredText`_; see prebuilt directory for
-PDFs or other binary output, and the source directory for source files.
+A repo for FOSS presentations in `reStructuredText`_; see the prebuilt directory for
+PDFs or other binary output, and the source directories for source files.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 
-BYOD? - Putting The Pieces Together For An Open Source Drone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Current presentations include FOSS instrumentation & drone platforms, as well as
+security hardening from the kernel up; a small subset of the features described
+in the Hardened presentation are now available in the mainline kernel.
+
+An Open Instrumentaion Platform: Getting The Most From MavLink, ArduPilot, and BeagleBone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Abstract
 --------
 
-What is a drone?  What is a quad-copter?  What is an autopilot, and just what is
-an IMU or a Kalman filter?  This presentation will describe the open source
-drone architecture defined by the Ardupilot firmware, the MAVLink message
-protocol, and various supported autopilot devices and peripherals.  We'll
-cover all the current capabilities and pieces of the core software stack, 
-s well as extended support for different vehicle platforms, computer vision
-processing, cameras and image tags, and multi-vehicle swarms. Airframe options
-and alternative firmware will  also be discussed, including available support
-for micro-drones.
+What is a drone?  What is an autopilot, and just what is an IMU and a Kalman filter?
+This presentation will describe an open source hardware and software architecture
+defined by the Ardupilot firmware, the MAVLink message protocol, several layers of
+user-space software, and various supported hardware devices and peripherals.  We
+will also cover the current capabilities and components of the core software stack, 
+as well as extended support for different hardware platforms and sensors, computer vision
+processing, cameras and image tags, as well as specific science applications and
+related FOSS projects currently underway.  The two highlighted projects both suggest
+non-traditional (and less mobile) data acquisition applications; for more typical
+UAV applications, airframe options and alternative firmware will also be discussed.
 
 Slides
 ------
@@ -36,7 +42,7 @@ Squash Those IoT Security Bugs with a Hardened System Profile
 Short Abstract
 --------------
 
-Although the tools and documentation have been around a long time, the industry as a whole has been woefully slow at taking security engineering seriously (even more so in the embedded world). The current mainline kernel includes several access control systems that reduce the risk of bugs escalating into high-level security compromises, such as the venerable SELinux (which is enabled by default in Android 4.4 and several "enterprise" Linux distributions).  This presentation will focus on a complementary set of security mechanisms that work independently from the overlying frameworks: PIE toolchain hardening, PAX kernel hardening, and the PAX userland tools. These technologies work together to demote whole classes of bugs from headline-grabbing remote compromise and/or data theft exploits to "mere" DoS annoyances.
+Although the tools and documentation have been around a long time, the industry as a whole has been woefully slow at taking security engineering seriously (even more so in the embedded world). The current mainline kernel includes several access control systems that reduce the risk of bugs escalating into high-level security compromises, such as the venerable SELinux (which is enabled by default in Android 4.4 and several "enterprise" Linux distributions).  This presentation focuses on a complementary set of security mechanisms that work independently from the overlying frameworks: PIE toolchain hardening, PAX kernel hardening, and the PAX userland tools. These technologies work together to demote whole classes of bugs from headline-grabbing remote compromise and/or data theft exploits to "mere" DoS annoyances.
 
 Long Abstract
 -------------

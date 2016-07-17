@@ -1,11 +1,14 @@
-default: docs
+default: drones
 
-docs:
-	$(MAKE) -C drones -Orecurse || exit $$?
+all: drones hardened
 
-docs2:
-	$(MAKE) -C hardened -Orecurse || exit $$?
+drones:
+	$(MAKE) -C foss-instrumentation -Orecurse || exit $$?
+
+hardened:
+	$(MAKE) -C $@ -Orecurse || exit $$?
 
 clean:
-	$(MAKE) -C drones -Orecurse $@ || exit $$?
+	$(MAKE) -C foss-instrumentation -Orecurse $@ || exit $$?
+	$(MAKE) -C hardened -Orecurse $@ || exit $$?
 

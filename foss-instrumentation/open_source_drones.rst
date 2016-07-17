@@ -1,12 +1,14 @@
 .. -*- coding: utf-8 -*-
 
-##############################################################
- BYOD? - Putting The Pieces Together For An Open Source Drone
-##############################################################
+###########################################################################################
+ An Open Instrumentaion Platform: Getting The Most From MavLink, ArduPilot, and BeagleBone
+###########################################################################################
 
-.. image:: images/APM_copter.jpg
+.. image:: images/make-a-drone.jpg
    :align: center
    :width: 95%
+.. Make Magazine: Boston’s 3D Printed Drones Meet Up, by Matt Stultz
+   http://makezine.com/2014/12/17/bostons-3d-printed-drones-meet-up/
 
 .. contents:: Presentation Outline
    :depth: 1
@@ -29,12 +31,16 @@ Autopilots, Copters, and Drones
   * Lots of I/O ports (I2C, SPI, UARTs)
   * Ardupilot, OpenPilot/LibrePilot, PX4, UAVCAN
 
-* Open source autopilot boards
+* Open source autopilot boards and host machines
 
-  * Ardupilot - PixHawk, PX/4, AUAV-X2, PXF/mini, BBBMINI Cape
+  * Ardupilot - PixHawk, PX/4, AUAV-X2, PXFmini, BBBMINI Cape/BeaglePilot
   * LibrePilot - CopterControl, CC3D, Revo/Nano, OPLink Mini
   * Some autopilots support dual firmware: VRBRAIN 4
   * Price range $20 - $200 and up
+  * Smart Drone Kit Using PXFmini and RaspberryPi Zero
+
+https://www.hackster.io/12590/pi0drone-a-200-smart-drone-with-the-pi-zero-4fec08
+
 
 .. raw:: pdf
 
@@ -93,7 +99,7 @@ MAVLink System Architecture
 
     Spacer 0 4mm
 
-* Full MAVLink vehicle configuration
+* Full MAVLink/MAVConn vehicle configuration
 * Linux host system and integrated machine vision/object tracking
 * Uses multiple transport/physical layers and redundant GCS links
 * Camera X is a third-party camera connected via serial link
@@ -112,7 +118,7 @@ MAVLink Software Stack
 
    Spacer 0 1cm
 
-* MAVLink "middleware" typically runs on onboard Linux host
+* MAVConn "middleware" typically runs on onboard Linux host
 * Host connects to autopilot and onboard cameras
 * MAVLink supports multiple OS/IPC Mechanisms/Interfaces
 * MAVLink common messages are extended by autopilot firmware
@@ -127,11 +133,11 @@ MAVLink Message Protocol Routing
 
    Spacer 0 1cm
 
-* The MAVLINK broadcast message format includes action, status and command
+* The MAVConn message broadcast includes action, status and command
   messages, which can be used both for onboard and offboard communication
-* Messages are identified by content instead of recipient addresses
-* Routing nodes (node 2) filter messages that belong only to a 
-  particular subset (nodes 3, 4, and 5)
+* Messages are identified and filtered by content instead of recipient addresses
+* Routing nodes (node 2) filter messages that belong only to a particular
+  subset (nodes 3, 4, and 5)
 
 Open/Supported Hardware
 =======================
@@ -209,6 +215,9 @@ Other Vehicles and Software/Firmware
 ====================================
 
 
+* Small, Easy and Autonomous 3D-printed Drone
+
+https://blog.adafruit.com/2014/11/13/first-ascent-hobbyist-friendly-autonomous-compact-3d-printed-scout-drone-3dthursday-3dprinting/
 
 
 * UAVCAN https://github.com/uavcan
@@ -218,7 +227,9 @@ Other Vehicles and Software/Firmware
 Useful (and fun) Drone Applications
 ===================================
 
-* 
+* BeagleBone NDVI Cape
+
+https://publiclab.org/notes/gpenzo/03-25-2015/ndvi-cape-for-the-beagle-bone
 
 Resources
 =========
@@ -278,7 +289,7 @@ License and Thanks!
 :Author: Stephen L Arnold
 :Contact: answers@vctlabs.com
 :Revision: 0.1
-:Date: 2016-01-30T23:20:06,716796648-0800
+:Date: Sat, 16 Jul 2016 19:19:24 -0700
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_
 
