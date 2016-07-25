@@ -34,7 +34,7 @@ Slides
 
 `prebuilt/open_source_drones.pdf <prebuilt/open_source_drones.pdf?raw=true>`_
 
-`drones/open_source_drones.rst <drones/open_source_drones.rst?raw=true>`_
+`foss-instrumentation/open_source_drones.rst <foss-instrumentation/open_source_drones.rst?raw=true>`_
 
 Squash Those IoT Security Bugs with a Hardened System Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
