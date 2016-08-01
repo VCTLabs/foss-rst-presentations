@@ -12,22 +12,23 @@ Current presentations include FOSS instrumentation & drone platforms, as well as
 security hardening from the kernel up; a small subset of the features described
 in the Hardened presentation are now available in the mainline kernel.
 
-An Open Instrumentaion Platform: Getting The Most From MavLink, ArduPilot, and BeagleBone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Towards an Open Instrumentaion Platform: Getting the Most From MAVLink, ArduPilot, and BeagleBone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Abstract
 --------
 
 What is a drone?  What is an autopilot, and just what is an IMU and a Kalman filter?
-This presentation will describe an open source hardware and software architecture
+This presentation describes an open source hardware and software architecture
 defined by the Ardupilot firmware, the MAVLink message protocol, several layers of
-user-space software, and various supported hardware devices and peripherals.  We
-will also cover the current capabilities and components of the core software stack, 
+user-space software, and various supported hardware devices and peripherals.  It
+will also cover the current capabilities and components of the core software stacks, 
 as well as extended support for different hardware platforms and sensors, computer vision
 processing, cameras and image tags, as well as specific science applications and
 related FOSS projects currently underway.  The two highlighted projects both suggest
-non-traditional (and less mobile) data acquisition applications; for more typical
-UAV applications, airframe options and alternative firmware will also be discussed.
+more non-traditional (and less mobile) data acquisition applications using these tools;
+for more typical UAV applications, airframe options and alternative firmware will
+also be discussed.
 
 Slides
 ------
