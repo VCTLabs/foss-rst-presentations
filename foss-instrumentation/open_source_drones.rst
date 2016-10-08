@@ -1,14 +1,16 @@
 .. -*- coding: utf-8 -*-
 
-###########################################################################################
- An Open Instrumentaion Platform: Getting The Most From MavLink, ArduPilot, and BeagleBone
-###########################################################################################
+############################################################################################
+ An Open Instrumentation Platform: Getting The Most From MAVLink, ArduPilot, and BeagleBone
+############################################################################################
 
-.. image:: images/make-a-drone.jpg
+.. image:: images/bb-ndvi.jpg
    :align: center
-   :width: 95%
+   :width: 75%
 .. Make Magazine: Boston’s 3D Printed Drones Meet Up, by Matt Stultz
    http://makezine.com/2014/12/17/bostons-3d-printed-drones-meet-up/
+   or
+   https://publiclab.org/notes/gpenzo/03-25-2015/ndvi-cape-for-the-beagle-bone
 
 .. contents:: Presentation Outline
    :depth: 1
@@ -23,7 +25,7 @@ Autopilots, Copters, and Drones
 * (RC) Copters are not drones
 
   * Drones have an autopilot and are (or at least can be) autonomous
-  * RC copters (even with an IMU) are not fully autonomous
+  * RC copters (even with an IMU) are generally not fully autonomous
 
 * An autopilot has programmable firmware
 
@@ -41,6 +43,28 @@ Autopilots, Copters, and Drones
 
 https://www.hackster.io/12590/pi0drone-a-200-smart-drone-with-the-pi-zero-4fec08
 
+Supported Platforms and Flight Models
+=====================================
+
+* Original (software) vehicle models in ArduPilot and MAVLink
+
+  - Copter
+  - Rover
+  - Plane
+  - Antenna tracker
+
+* New vehicle / flight models in MAVLink v1.0/v2.0
+
+  - Generic micro air vehicle
+  - Fixed-wing aircraft
+  - Single/multi-rotor copters
+  - Antenna tracker / ground control station
+  - Airship
+  - Free balloon
+  - Rocket
+  - Ground rover
+  - Surface vessel, Submarine
+  - Flapping wing
 
 .. raw:: pdf
 
@@ -160,19 +184,6 @@ and Why You Should Not BYO Airframe
 
 Because it's hard...
 
-.. raw:: pdf
-
-   PageBreak
-   Transition Dissolve 1 90
-
-Airframes and Kits
-==================
-
-and Why You Should Not BYO Airframe
------------------------------------
-
-Because it's hard...
-
 .. image:: images/1.jpg
    :align: center
    :width: 1500
@@ -215,21 +226,22 @@ Other Vehicles and Software/Firmware
 ====================================
 
 
-* Small, Easy and Autonomous 3D-printed Drone
-
-https://blog.adafruit.com/2014/11/13/first-ascent-hobbyist-friendly-autonomous-compact-3d-printed-scout-drone-3dthursday-3dprinting/
-
-
+* Autonomous 3D-printed Drone
+  http://tinyurl.com/3D-printed-drone
 * UAVCAN https://github.com/uavcan
 * ROS https://github.com/ros
 * Other repositories https://github.com/Dronecode
 
-Useful (and fun) Drone Applications
-===================================
+Useful (and fun) Applications
+=============================
 
 * BeagleBone NDVI Cape
+  http://tinyurl.com/beaglebone-ndvi
 
-https://publiclab.org/notes/gpenzo/03-25-2015/ndvi-cape-for-the-beagle-bone
+
+* SeaSlug (long-deployment mobile marine sensor platform)
+  http://tinyurl.com/SeaSlug-pdf
+
 
 Resources
 =========
@@ -243,6 +255,7 @@ Ardupilot and MAVLink
    * https://github.com/mavlink/c_uart_interface_example
    * https://github.com/pixhawk/mavconn
    * https://github.com/diydrones/ardupilot
+   * http://tinyurl.com/FLIR-TIFF-MAVLink
 
 Additional Resources
 
