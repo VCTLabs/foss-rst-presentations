@@ -242,7 +242,7 @@ There are five PaX protections that can be enforced (in SOFTMODE) or relaxed (in
 
 .. warning:: setfattr and getfattr know nothing about PaX, so they will not perform any sanity checking of field contents.  You've been warned...
 
-**paxctl-ng** - paxctl-ng is the new swiss army knife for working with PT_PAX an XATTR_PAX markings. It can be built with support for just one or the other or both types of markings.
+**paxctl-ng** - paxctl-ng is the new swiss army knife for working with both PT_PAX and XATTR_PAX markings. It can be built with support for just one or the other or both types of markings.
 
 Hardened Toolchain
 ==================
