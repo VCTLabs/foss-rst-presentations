@@ -315,7 +315,7 @@
       alignment: TA_CENTER
       keepWithNext: false
       spaceAfter: 10
-      backColor: skyblue
+#      backColor: skyblue
 
     subtitle:
       parent: title
