@@ -53,14 +53,14 @@ Supported Platforms and Flight Models
   - Plane
   - Antenna tracker
 
-* New vehicle / flight models in MAVLink v1.0/v2.0
+* Current vehicle / flight models in MAVLink v1.0/v2.0
 
   - Generic micro air vehicle
   - Fixed-wing aircraft
   - Single/multi-rotor copters
   - Antenna tracker / ground control station
   - Airship
-  - Free balloon
+  - Free balloons, Kites
   - Rocket
   - Ground rover
   - Surface vessel, Submarine
@@ -106,11 +106,57 @@ Autopilot Examples
 Ardupilot / APM
 ===============
 
+.. figure:: images/ardupilot_matrix.png
+   :width: 90%
+   :align: center
+
+
 MAVLink and MAVConn
 ===================
 
-Ground Control
-==============
+MAVLink Protocol and Message Specification
+------------------------------------------
+
+.. pull-quote::
+   
+   A very lightweight, header-only message marshalling library for micro air vehicles.
+   The current MAVLink Protocol Version can be found in the `Common MAVLink Message Documentation`_
+
+..
+
+  * MAVLink Code and Generator
+
+There is a “common message set” containing widely used messages, which is distributed
+as header-only C library. If you like to use your own custom messages, you can generate
+these with the MAVLink Generator (C/C++, Python) or QGroundControl. 
+
+MAVCONN Aerial Middleware
+-------------------------
+
+.. pull-quote::
+
+   The PIXHAWK MAVOS middleware / robotics toolkit is a heterogenous system
+   consisting of an image processing and communication architecture for computer
+   vision based flight control.
+
+..
+
+
+  * Pixhawk MAVCONN introduction at `EMAV 2009`_ (1st place indoor)
+  * Fully autonomous flight demonstrated `July 2010`_
+
+.. _EMAV 2009: https://pixhawk.ethz.ch/overview/awards
+.. _July 2010: https://pixhawk.ethz.ch/micro_air_vehicle/quadrotor/cheetah
+.. _Common MAVLink Message Documentation: http://mavlink.org/messages/common
+
+
+MAVLink Message Spec Example
+============================
+
+.. figure:: images/mavlink_protocol_docs.png
+   :width: 90%
+   :align: center
+
 
 MAVLink System Architecture
 ===========================
@@ -123,10 +169,10 @@ MAVLink System Architecture
 
     Spacer 0 4mm
 
-* Full MAVLink/MAVConn vehicle configuration
-* Linux host system and integrated machine vision/object tracking
-* Uses multiple transport/physical layers and redundant GCS links
-* Camera X is a third-party camera connected via serial link
+  * Full MAVLink/MAVConn vehicle configuration
+  * Linux host system and integrated machine vision/object tracking
+  * Uses multiple transport/physical layers and redundant GCS links
+  * Camera X is a third-party camera connected via serial link
 
 MAVLink Software Stack
 ======================
@@ -163,8 +209,30 @@ MAVLink Message Protocol Routing
 * Routing nodes (node 2) filter messages that belong only to a particular
   subset (nodes 3, 4, and 5)
 
-Open/Supported Hardware
-=======================
+
+Ground Control
+==============
+
+In addition to the onboard software already discussed, we also need a ground
+control station, typically used for everything from real-time communication
+and tracking to mission/vehicle configuration and flashing new autopilot
+firmware images.  Options include:
+
+  * `QGroundControl`_: provides full flight control and mission planning for any
+    MAVLink enabled drone and configuration for ArduPilot or PX4 Pro powered vehicles.
+  * `Mission Planner`_:  Full featured and widely used open source GCS software
+    Platform: Windows, Mac OS X (Using Mono)
+  * `APM Planner 2.0`_: smaller user base and reduced feature set when compared with
+    Mission Planner but better on Linux.
+  * `MAVProxy`_: Linux GCS often used by Plane developers. Primarily a command line
+    interface with graphical modules for map and mission editing. Written in Python,
+    and extensible via python modules.
+
+.. _QGroundControl: http://www.qgroundcontrol.org/
+.. _Mission Planner: https://github.com/ArduPilot/MissionPlanner
+.. _APM Planner 2.0: https://github.com/ArduPilot/apm_planner
+.. _MAVProxy: https://github.com/ArduPilot/MAVProxy
+
 
 GPS, IMUs, Sensors, and More
 ============================
@@ -302,7 +370,7 @@ License and Thanks!
 :Author: Stephen L Arnold
 :Contact: answers@vctlabs.com
 :Revision: 0.1
-:Date: Sat, 16 Jul 2016 19:19:24 -0700
+:Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_
 
@@ -316,4 +384,8 @@ License and Thanks!
 .. image:: images/cc3.png
    :align: left
    :width: .5in
+
+.. |date| date::
+.. |time| date:: %H:%M
+
 
