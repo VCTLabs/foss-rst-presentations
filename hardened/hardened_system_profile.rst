@@ -380,7 +380,7 @@ License and Thanks!
 :FOSS Hat: Gentoo Linux Developer
 :Contact: answers@vctlabs.com
 :Revision: 0.2
-:Date: 2016-02-13T18:19:06,716796648-0800
+:Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_,
 
@@ -398,5 +398,8 @@ Portions Copyright 2001–2016 `Gentoo Foundation, Inc`_.
 .. image:: images/cc3.png
    :align: left
    :width: .5in
+
+.. |date| date::
+.. |time| date:: %H:%M
 
 
