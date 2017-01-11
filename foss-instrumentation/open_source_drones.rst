@@ -164,14 +164,15 @@ System Architecture
    :align: center
    :scale: 60%
 
+
 .. raw:: pdf
 
     Spacer 0 4mm
 
-  * Full MAVLink/MAVConn vehicle configuration
-  * Linux host system and integrated machine vision/object tracking
-  * Uses multiple transport/physical layers and redundant GCS links
-  * Camera X is a third-party camera connected via serial link
+* Full MAVLink/MAVConn vehicle configuration
+* Linux host system and integrated machine vision/object tracking
+* Uses multiple transport/physical layers and redundant GCS links
+* Camera X is a third-party camera connected via serial link
 
 Software Stack
 ==============
