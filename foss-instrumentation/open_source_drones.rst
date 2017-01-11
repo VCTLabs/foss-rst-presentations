@@ -91,7 +91,7 @@ Autopilot Examples
 
 .. raw:: pdf
 
-    Spacer 0 1cm
+   Spacer 0 1cm
 
 .. figure:: images/vrbrainpinout3-0.jpg
    :width: 70%
@@ -101,7 +101,7 @@ Autopilot Examples
 
 .. raw:: pdf
 
-    PageBreak cutePage
+   PageBreak cutePage
 
 Ardupilot / APM
 ===============
@@ -160,13 +160,19 @@ MAVLink Message Spec Example
 System Architecture
 ===================
 
+.. raw:: pdf
+
+   Spacer 0 4mm
+
 .. image:: images/mavlink_protocol_links.png
    :align: center
    :scale: 60%
 
 .. raw:: pdf
 
-    Spacer 0 4mm
+   Spacer 0 4mm
+
+..
 
   * Full MAVLink/MAVConn vehicle configuration
   * Linux host system and integrated machine vision/object tracking
@@ -178,10 +184,10 @@ Software Stack
 
 .. raw:: pdf
 
-    Spacer 0 4mm
+   Spacer 0 4mm
 
 .. figure:: images/mavlink_stack.png
-   :scale: 75%
+   :scale: 95%
 
 .. raw:: pdf
 
@@ -196,11 +202,11 @@ Message Protocol Routing
 ========================
 
 .. image:: images/message_routing.png
-   :scale: 30%
+   :scale: 35%
 
 .. raw:: pdf
 
-   Spacer 0 1cm
+   Spacer 0 4mm
 
 * The MAVConn message broadcast includes action, status and command
   messages, which can be used both for onboard and offboard communication
@@ -215,7 +221,9 @@ Ground Control
 In addition to the onboard software already discussed, we also need a ground
 control station, typically used for everything from real-time communication
 and tracking to mission/vehicle configuration and flashing new autopilot
-firmware images.  Options include:
+firmware images.
+
+Options include:
 
   * `QGroundControl`_: provides full flight control and mission planning for any
     MAVLink enabled drone and configuration for ArduPilot or PX4 Pro powered vehicles.
@@ -239,6 +247,18 @@ GPS, IMUs, Sensors, and More
 Computer Vision, Cameras and Metadata
 =====================================
 
+
+
+Example: FLIR ViewPro IR Camera
+
+* `FLIR Tiff image file`_ - a TIFF file holding an IR image and corresponding metadata
+  (uses extensions provided by `TIFF specification v6.0`_).
+
+.. _FLIR Tiff image file: http://www.flir.com/uploadedFiles/sUAS/Products/Vue-Pro/FLIR-Interface-Requirements-TIFF.pdf
+.. _TIFF specification v6.0: http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf
+
+
+
 .. raw:: pdf
 
    PageBreak twoColumn
@@ -253,7 +273,7 @@ Airframes and Kits
 
 .. raw:: pdf
 
-    Spacer 0 1cm
+   Spacer 0 1cm
 
 .. image:: images/2.jpg
    :align: center
@@ -265,7 +285,7 @@ Airframes and Kits
 
 .. raw:: pdf
 
-    Spacer 0 2cm
+   Spacer 0 2cm
 
 .. image:: images/make-a-drone.jpg
    :align: center
@@ -273,7 +293,7 @@ Airframes and Kits
 
 .. raw:: pdf
 
-    Spacer 0 1cm
+   Spacer 0 1cm
 
 .. image:: images/pizero-apm-kit.jpg
    :align: center
@@ -281,7 +301,7 @@ Airframes and Kits
 
 .. raw:: pdf
 
-    PageBreak cutePage
+   PageBreak cutePage
 
 
 Other Hardware and Software/Firmware
@@ -341,22 +361,22 @@ Resources
 
 Ardupilot and MAVLink
 
-   * http://copter.ardupilot.com/
-   * https://github.com/mavlink/mavlink
-   * https://github.com/mavlink/c_library
-   * https://github.com/mavlink/qgroundcontrol
-   * https://github.com/mavlink/c_uart_interface_example
-   * https://github.com/pixhawk/mavconn
-   * https://github.com/diydrones/ardupilot
-   * http://tinyurl.com/FLIR-TIFF-MAVLink
+  * http://copter.ardupilot.com/
+  * https://github.com/mavlink/mavlink
+  * https://github.com/mavlink/c_library
+  * https://github.com/mavlink/qgroundcontrol
+  * https://github.com/mavlink/c_uart_interface_example
+  * https://github.com/pixhawk/mavconn
+  * https://github.com/diydrones/ardupilot
+  * http://tinyurl.com/FLIR-TIFF-MAVLink
 
 Additional Resources
 
-   * https://www.dronecode.org/
-   * https://www.librepilot.org/
-   * http://dev.ardupilot.com/wiki/building-px4-for-linux-with-make/
-   * http://copter.ardupilot.com/wiki/build-your-own-multicopter/
-   * http://www.instructables.com/id/DIY-Drones/
+  * https://www.dronecode.org/
+  * https://www.librepilot.org/
+  * http://dev.ardupilot.com/wiki/building-px4-for-linux-with-make/
+  * http://copter.ardupilot.com/wiki/build-your-own-multicopter/
+  * http://www.instructables.com/id/DIY-Drones/
 
 References and Specifications
 =============================
@@ -380,6 +400,7 @@ References and Specifications
    
        The `XMP 1.0 Specification`_ - XMP Specification, `Part 1`_ (April, 2012), `Part 2`_ (November 2014), `Part 3`_ (November 2014), Adobe Developers Association.
 
+
 .. _MAVLINK Common Message Set documentation: https://pixhawk.ethz.ch/mavlink/
 .. _ArduCopter GCS_Mavlink.cpp: https://github.com/diydrones/ardupilot/blob/Copter-3.3/ArduCopter/GCS_Mavlink.cpp
 .. _Exif 2.3 Specification: http://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
@@ -394,7 +415,7 @@ License and Thanks!
 
 :Author: Stephen L Arnold
 :Contact: answers@vctlabs.com
-:Revision: 0.1
+:Revision: 0.2
 :Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2016 `VCT Labs, Inc.`_
@@ -404,7 +425,7 @@ License and Thanks!
 
 .. raw:: pdf
 
-    Spacer 0 5mm
+   Spacer 0 5mm
 
 .. image:: images/cc3.png
    :align: left
