@@ -141,7 +141,6 @@ MAVCONN Aerial Middleware
 
 ..
 
-
   * Pixhawk MAVCONN introduction at `EMAV 2009`_ (1st place indoor)
   * Fully autonomous flight demonstrated `July 2010`_
 
@@ -158,8 +157,8 @@ MAVLink Message Spec Example
    :align: center
 
 
-MAVLink System Architecture
-===========================
+System Architecture
+===================
 
 .. image:: images/mavlink_protocol_links.png
    :align: center
@@ -174,8 +173,8 @@ MAVLink System Architecture
   * Uses multiple transport/physical layers and redundant GCS links
   * Camera X is a third-party camera connected via serial link
 
-MAVLink Software Stack
-======================
+Software Stack
+==============
 
 .. raw:: pdf
 
@@ -193,8 +192,8 @@ MAVLink Software Stack
 * MAVLink supports multiple OS/IPC Mechanisms/Interfaces
 * MAVLink common messages are extended by autopilot firmware
 
-MAVLink Message Protocol Routing
-================================
+Message Protocol Routing
+========================
 
 .. image:: images/message_routing.png
    :scale: 30%
@@ -244,34 +243,21 @@ Computer Vision, Cameras and Metadata
 
    PageBreak twoColumn
 
+
 Airframes and Kits
 ==================
 
-and Why You Should Not BYO Airframe
------------------------------------
-
-Because it's hard...
-
 .. image:: images/1.jpg
    :align: center
-   :width: 1500
+   :width: 75%
 
 .. raw:: pdf
 
-   PageBreak
-   Transition Wipe 1 90 I
+    Spacer 0 1cm
 
-Airframes and Kits
-==================
-
-and Why You Should Not BYO Airframe
------------------------------------
-
-Because it's hard...
-
-.. image:: images/1.jpg
+.. image:: images/2.jpg
    :align: center
-   :width: 95%
+   :width: 75%
 
 .. raw:: pdf
 
@@ -279,36 +265,75 @@ Because it's hard...
 
 .. raw:: pdf
 
-    Spacer 0 3cm
+    Spacer 0 2cm
 
-.. image:: images/2.jpg
+.. image:: images/make-a-drone.jpg
    :align: center
-   :width: 95%
+   :width: 75%
+
+.. raw:: pdf
+
+    Spacer 0 1cm
+
+.. image:: images/pizero-apm-kit.jpg
+   :align: center
+   :width: 75%
 
 .. raw:: pdf
 
     PageBreak cutePage
-    Transition Split 0
 
-Other Vehicles and Software/Firmware
+
+Other Hardware and Software/Firmware
 ====================================
 
-
 * Autonomous 3D-printed Drone
-  http://tinyurl.com/3D-printed-drone
-* UAVCAN https://github.com/uavcan
-* ROS https://github.com/ros
-* Other repositories https://github.com/Dronecode
+
+  - http://tinyurl.com/3D-printed-drone
+
+* UAVCAN (a lightweight protocol for aerospace and robotics)
+
+  - https://github.com/uavcan
+
+* DroneCode.Org UAV repositories
+
+  - https://github.com/Dronecode
+
+* The Robot Operating System (ROS)
+
+  - https://github.com/ros
+
+* MicroPython (Python for microcontrollers)
+
+  - https://github.com/micropython/micropython
+
+* RTIMULib2 (C++ and Python 9-dof, 10-dof and 11-dof IMU library)
+
+  - https://github.com/Nick-Currawong/RTIMULib2
+
+* WeatherPi
+
+  - https://github.com/VCTLabs/weather-rpi
+
 
 Useful (and fun) Applications
 =============================
 
-* BeagleBone NDVI Cape
-  http://tinyurl.com/beaglebone-ndvi
+* BeagleBone NDVI Cape  http://tinyurl.com/beaglebone-ndvi
 
+  - Custom hardware and image processing board with dual cameras
 
-* SeaSlug (long-deployment mobile marine sensor platform)
-  http://tinyurl.com/SeaSlug-pdf
+* SeaSlug (marine sensor system)  http://tinyurl.com/SeaSlug-pdf
+
+  - A high-uptime, long-deployment mobile marine sensor platform
+
+* GSoC BeagleSat  https://github.com/nvisnjic/BeagleSat
+
+  - An open source nano satellite platform toolkit (a Google Summer of Code project)
+
+* GSoC Sonics https://github.com/Visaoni/beagle-sonic-anemometer
+
+  - An open source anemometer using ultrasonic time of flight (a Google Summer of Code project)
 
 
 Resources
