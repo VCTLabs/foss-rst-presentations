@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-############################################################################################
- An Open Instrumentation Platform: Getting The Most From MAVLink, ArduPilot, and BeagleBone
-############################################################################################
+####################################################################################################
+ Towards An Open Instrumentation Platform: Getting The Most From MAVLink, ArduPilot, and BeagleBone
+####################################################################################################
 
 .. image:: images/bb-ndvi.jpg
    :align: center
@@ -19,10 +19,11 @@
 
    SetPageCounter
 
-Autopilots, Copters, and Drones
-===============================
 
-* (RC) Copters are not drones
+MAVs: Autopilots, Copters, and Drones
+=====================================
+
+* Micro Aerial Vehicles and (RC) Copters are not Drones
 
   * Drones have an autopilot and are (or at least can be) autonomous
   * RC copters (even with an IMU) are generally not fully autonomous
@@ -31,44 +32,24 @@ Autopilots, Copters, and Drones
 
   * Usually a microcontroller (typically AVR or ARM)
   * Lots of I/O ports (I2C, SPI, UARTs)
-  * Ardupilot, OpenPilot/LibrePilot, PX4, UAVCAN
+  * Open Firmware: Ardupilot, OpenPilot/LibrePilot, PX4, etc
 
-* Open source autopilot boards and host machines
+* Open source hardware: autopilot boards and host machines
 
-  * Ardupilot - PixHawk, PX/4, AUAV-X2, PXFmini, BBBMINI Cape/BeaglePilot
+  * Ardupilot - BBBMINI Cape/BeaglePilot, PixHawk, PX/4, AUAV-X2, PXFmini, VRBRAIN 4 (supports dual firmware)
   * LibrePilot - CopterControl, CC3D, Revo/Nano, OPLink Mini
-  * Some autopilots support dual firmware: VRBRAIN 4
-  * Price range $20 - $200 and up
-  * Smart Drone Kit Using PXFmini and RaspberryPi Zero
+  * Autopilot board price range $20 - $200 and up
+  * Embedded Linux board price range $5 - $100
+  * `$200 Smart Drone`_ "Kit" Using PXFmini and RaspberryPi Zero
+  * `$100 DIY Smart Drone`_ using Pi Zero and BYO PXFmini clone
 
-https://www.hackster.io/12590/pi0drone-a-200-smart-drone-with-the-pi-zero-4fec08
-
-Supported Platforms and Flight Models
-=====================================
-
-* Original (software) vehicle models in ArduPilot and MAVLink
-
-  - Copter
-  - Rover
-  - Plane
-  - Antenna tracker
-
-* Current vehicle / flight models in MAVLink v1.0/v2.0
-
-  - Generic micro air vehicle
-  - Fixed-wing aircraft
-  - Single/multi-rotor copters
-  - Antenna tracker / ground control station
-  - Airship
-  - Free balloons, Kites
-  - Rocket
-  - Ground rover
-  - Surface vessel, Submarine
-  - Flapping wing
+.. _$200 Smart Drone: https://www.hackster.io/12590/pi0drone-a-200-smart-drone-with-the-pi-zero-4fec08
+.. _$100 DIY Smart Drone: https://hackaday.io/project/10407-mini-zee-a-100-diy-smart-drone-with-the-pi-zero
 
 .. raw:: pdf
 
    PageBreak twoColumn
+
 
 Autopilot Examples
 ==================
@@ -103,6 +84,30 @@ Autopilot Examples
 
    PageBreak cutePage
 
+
+MAVLink / Ardupilot Flight Models
+=================================
+
+* Original (software) vehicle models in ArduPilot and MAVLink
+
+  - Copter
+  - Rover
+  - Plane
+  - Antenna tracker
+
+* Current vehicle / flight models in MAVLink v1.0/v2.0
+
+  - Generic micro air vehicle
+  - Fixed-wing aircraft
+  - Single/multi-rotor copters
+  - Antenna tracker / ground control station
+  - Airship
+  - Free balloons, Kites
+  - Rocket
+  - Ground rover
+  - Surface vessel, Submarine
+  - Flapping wing
+
 Ardupilot / APM
 ===============
 
@@ -111,42 +116,42 @@ Ardupilot / APM
    :align: center
 
 
-MAVLink and MAVConn
+MAVLink and MAVCONN
 ===================
 
 MAVLink Protocol and Message Specification
 ------------------------------------------
 
-.. pull-quote::
-   
-   A very lightweight, header-only message marshalling library for micro air vehicles.
-   The current MAVLink Protocol Version can be found in the `Common MAVLink Message Documentation`_
+*A very lightweight, header-only message marshalling library for micro air vehicles.*
 
-..
+.. raw:: pdf
 
-  * MAVLink Code and Generator
+   Spacer 0 2mm
+
+* `Common MAVLink Message Documentation`_
+* `MAVLink Code and Generator`_
 
 There is a “common message set” containing widely used messages, which is distributed
-as header-only C library. If you like to use your own custom messages, you can generate
-these with the MAVLink Generator (C/C++, Python) or QGroundControl. 
+as header-only C library. If you need to add your own custom messages, you can generate
+the code with the MAVLink Generator (C/C++) and pymavlink (Python).
+
 
 MAVCONN Aerial Middleware
 -------------------------
 
-.. pull-quote::
+*The PIXHAWK MAVOS middleware / robotics toolkit is a heterogenous system consisting of an image processing and communication architecture for computer vision based flight control.*
 
-   The PIXHAWK MAVOS middleware / robotics toolkit is a heterogenous system
-   consisting of an image processing and communication architecture for computer
-   vision based flight control.
+.. raw:: pdf
 
-..
+   Spacer 0 2mm
 
-  * Pixhawk MAVCONN introduction at `EMAV 2009`_ (1st place indoor)
-  * Fully autonomous flight demonstrated `July 2010`_
+* Pixhawk MAVCONN introduction at `EMAV 2009`_ (1st place indoor)
+* Fully autonomous flight demonstrated `July 2010`_
 
+.. _Common MAVLink Message Documentation: http://mavlink.org/messages/common
+.. _MAVLink Code and Generator: https://github.com/mavlink/mavlink
 .. _EMAV 2009: https://pixhawk.ethz.ch/overview/awards
 .. _July 2010: https://pixhawk.ethz.ch/micro_air_vehicle/quadrotor/cheetah
-.. _Common MAVLink Message Documentation: http://mavlink.org/messages/common
 
 
 MAVLink Message Spec Example
@@ -168,17 +173,17 @@ System Architecture
    :align: center
    :scale: 60%
 
-
 .. raw:: pdf
 
    Spacer 0 4mm
 
-..
+.. this comment terminates formatting (workaround)
 
-* Full MAVLink/MAVConn vehicle configuration
+* Full MAVLink/MAVCONN autonomous vehicle configuration
 * Linux host system and integrated machine vision/object tracking
 * Uses multiple transport/physical layers and redundant GCS links
 * Camera X is a third-party camera connected via serial link
+
 
 Software Stack
 ==============
@@ -198,6 +203,7 @@ Software Stack
 * Host connects to autopilot and onboard cameras
 * MAVLink supports multiple OS/IPC Mechanisms/Interfaces
 * MAVLink common messages are extended by autopilot firmware
+
 
 Message Protocol Routing
 ========================
@@ -245,10 +251,9 @@ Options include:
 GPS, IMUs, Sensors, and More
 ============================
 
+
 Computer Vision, Cameras and Metadata
 =====================================
-
-
 
 Example: FLIR ViewPro IR Camera
 
@@ -316,10 +321,6 @@ Other Hardware and Software/Firmware
 
   - https://github.com/uavcan
 
-* DroneCode.Org UAV repositories
-
-  - https://github.com/Dronecode
-
 * The Robot Operating System (ROS)
 
   - https://github.com/ros
@@ -335,6 +336,10 @@ Other Hardware and Software/Firmware
 * WeatherPi
 
   - https://github.com/VCTLabs/weather-rpi
+
+* DroneCode.Org UAV repositories
+
+  - https://github.com/Dronecode
 
 
 Useful (and fun) Applications
@@ -379,6 +384,7 @@ Additional Resources
   * http://copter.ardupilot.com/wiki/build-your-own-multicopter/
   * http://www.instructables.com/id/DIY-Drones/
 
+
 References and Specifications
 =============================
 
@@ -414,12 +420,12 @@ References and Specifications
 License and Thanks!
 ===================
 
-:Author: Stephen L Arnold
-:Contact: answers@vctlabs.com
-:Revision: 0.2
+:Author: Stephen L Arnold, Principal Scientist @vctlabs.com, developer @gentoo.org
+:Contact: stephen.arnold _at_ acm.org
+:Revision: 0.3
 :Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
-:Copyright: 2016 `VCT Labs, Inc.`_
+:Copyright: 2017 `VCT Labs, Inc.`_
 
 .. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
 .. _VCT Labs, Inc.: http://www.vctlabs.com
