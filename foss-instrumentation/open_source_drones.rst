@@ -23,7 +23,7 @@
 MAVs: Autopilots, Copters, and Drones
 =====================================
 
-* Micro Aerial Vehicles and (RC) Copters are not Drones
+* Micro Aerial Vehicles and (RC) Copters are not necessarily Drones
 
   * Drones have an autopilot and are (or at least can be) autonomous
   * RC copters (even with an IMU) are generally not fully autonomous
@@ -162,8 +162,8 @@ MAVLink Message Spec Example
    :align: center
 
 
-System Architecture
-===================
+MAVLink System Architecture
+===========================
 
 .. raw:: pdf
 
@@ -185,8 +185,8 @@ System Architecture
 * Camera X is a third-party camera connected via serial link
 
 
-Software Stack
-==============
+MAVLink Software Stack
+======================
 
 .. raw:: pdf
 
@@ -205,8 +205,8 @@ Software Stack
 * MAVLink common messages are extended by autopilot firmware
 
 
-Message Protocol Routing
-========================
+MAVLink Message Protocol Routing
+================================
 
 .. image:: images/message_routing.png
    :scale: 35%
@@ -222,8 +222,8 @@ Message Protocol Routing
   subset (nodes 3, 4, and 5)
 
 
-Ground Control
-==============
+Ground Control Station Software
+===============================
 
 In addition to the onboard software already discussed, we also need a ground
 control station, typically used for everything from real-time communication
@@ -251,6 +251,30 @@ Options include:
 GPS, IMUs, Sensors, and More
 ============================
 
+* Chips, Breakout Boards, Combo Boards, Builtin
+
+  - Bare sensors: cheaper/smaller to integrate but requires expertise
+  - Breakout boards: still cheap, convenient prototyping, SPI/I2C
+  - Combo boards: multiple sensors, already integrated, watch out for compatibiity
+  - SoC with integrated sensors: most convenient and least cheap, limited choice
+
+* Many available types/models of IMU online (eg, `SparkFun`_)
+
+  - 1 -10 DOF models on breakout boards $10 - $100
+  - Suitable for many applications (check data sheets)
+  - Higher end includes multiple slave buses, high speed, onboard processing
+
+* GPS for low-power mobile applications, typical UART interface
+* Specialized ARM SoCs for robotics and vehicle applications
+
+  - `BeagleBone Green`_ - includes Grove sensors, bus connectors
+  - `BeagleBone Blue`_ - includes integrated Strawson Robotics Cape
+  - `Udoo Neo`_ (Full or Extended) - builtin microcontroller, 9-DOF IMU, Wifi/BLE
+
+.. _SparkFun: https://www.sparkfun.com/pages/accel_gyro_guide
+.. _BeagleBone Green: https://beagleboard.org/green
+.. _BeagleBone Blue: https://beagleboard.org/blue
+.. _Udoo Neo: http://www.udoo.org/udoo-neo/
 
 
 Computer Vision, Cameras and Metadata
