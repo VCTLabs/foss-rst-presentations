@@ -252,18 +252,41 @@ GPS, IMUs, Sensors, and More
 ============================
 
 
+
 Computer Vision, Cameras and Metadata
 =====================================
 
-Example: FLIR ViewPro IR Camera
+Still Image Example: FLIR ViewPro IR Camera
 
-* `FLIR Tiff image file`_ - a TIFF file holding an IR image and corresponding metadata
-  (uses extensions provided by `TIFF specification v6.0`_).
+* `FLIR Thermal Tiff image file`_ - a TIFF file holding an IR image and corresponding metadata
+  (uses extensions provided by `TIFF`_, Exif, and XMP Specifications).
 
-.. _FLIR Tiff image file: http://www.flir.com/uploadedFiles/sUAS/Products/Vue-Pro/FLIR-Interface-Requirements-TIFF.pdf
-.. _TIFF specification v6.0: http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf
+Example MAVLink Interface Requirements:
+
+  :MAV0001: The System Shall_MAV0001 provide a MAVLink-compatible interface for
+          querying and storing position and attitude as metadata
+  :MAV0002: The System Shall_MAV0002 use only supported autopilot messages
+          for 3D position/velocity, camera attitude (look-angle), and associated
+          airfrme yaw/pitch/roll angles and speeds.
+  :MAV0003: The System Shall_MAV0003 use the MAVLink common message set for
+          generic vehicle support.
+  :MAV0004: The System Shall_MAV0004 use the MAVConn middleware broadcast
+          interface on systems with a Linux host.
+  :MAV0005: The System Shall_MAV0005 use the Ardupilot serial stream
+          interface on systems with only a Pixhawk autopilot.
 
 
+.. _FLIR Thermal Tiff image file: http://www.flir.com/uploadedFiles/sUAS/Products/Vue-Pro/FLIR-Interface-Requirements-TIFF.pdf
+.. _TIFF: http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf
+
+.. Frame Grabber / Motion Video Example: Video4Linux2 and OpenCV
+
+.. * `Beaglebone`_ - Video Capture and Image Processing on Embedded Linux
+..   (Beaglebone Images, Video and OpenCV - Derek Molloy Electronics)
+
+.. _Beaglebone: http://derekmolloy.ie/beaglebone-video-capture-and-image-processing-on-embedded-linux-using-opencv
+.. _Video4Linux2: https://linuxtv.org/downloads/v4l-dvb-apis/
+.. _OpenCV: http://docs.opencv.org/
 
 .. raw:: pdf
 
