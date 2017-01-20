@@ -277,6 +277,61 @@ GPS, IMUs, Sensors, and More
 .. _Udoo Neo: http://www.udoo.org/udoo-neo/
 
 
+.. # this should make a new page without a title
+
+.. raw:: pdf
+
+   PageBreak
+
+**Hardware Examples**
+
+.. raw:: pdf
+
+   Spacer 0 8mm
+
+.. figure:: images/lightning-and-wx-breakouts.jpg
+   :width: 70%
+   :align: center
+
+   Individual Sensor Breakouts, Lightning Detector
+
+.. raw:: pdf
+
+   PageBreak twoColumn
+
+**Hardware Examples...**
+
+.. raw:: pdf
+
+   Spacer 0 8mm
+
+.. figure:: images/beaglebone-green-grove-sensors.jpg
+   :width: 80%
+   :align: center
+
+   BeagleBone Green with Grove Sensor Breakouts
+
+.. raw:: pdf
+
+   FrameBreak
+
+**cont...**
+
+.. raw:: pdf
+
+   Spacer 0 8mm
+
+.. figure:: images/udoo-neo-sensors.jpg
+   :width: 80%
+   :align: center
+
+   Udoo Neo Extended with IoT Sensor Breakouts
+
+.. raw:: pdf
+
+   PageBreak cutePage
+
+
 Computer Vision, Cameras and Metadata
 =====================================
 
@@ -287,7 +342,7 @@ Still Image Example: FLIR ViewPro IR Camera
 
 Example MAVLink Interface Requirements:
 
-  :MAV0001: The System Shall_MAV0001 provide a MAVLink-compatible interface for
+  :MAV0001: The System Shall_MAV0001 provide a compatible MAVLink interface for
           querying and storing position and attitude as metadata
   :MAV0002: The System Shall_MAV0002 use only supported autopilot messages
           for 3D position/velocity, camera attitude (look-angle), and associated
@@ -464,12 +519,12 @@ References and Specifications
 .. _Part 3: http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2014-12/XMPSpecificationPart3.pdf
 
 
-License and Thanks!
-===================
+License and Author Info
+=======================
 
 :Author: Stephen L Arnold, Principal Scientist @vctlabs.com, developer @gentoo.org
 :Contact: stephen.arnold _at_ acm.org
-:Revision: 0.3
+:Revision: 0.4.0
 :Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
 :Copyright: 2017 `VCT Labs, Inc.`_
