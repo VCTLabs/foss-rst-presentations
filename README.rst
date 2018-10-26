@@ -12,7 +12,7 @@ Current presentations include FOSS instrumentation & drone platforms, as well as
 security hardening from the kernel up; a small subset of the features described
 in the Hardened presentation are now available in the mainline kernel.
 
-Towards an Open Instrumentaion Platform: Getting the Most From MAVLink, ArduPilot, and BeagleBone
+Towards an Open Instrumentation Platform: Getting the Most From MAVLink, ArduPilot, and BeagleBone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Abstract

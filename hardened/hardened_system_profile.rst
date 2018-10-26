@@ -101,11 +101,11 @@ Layered Architecture
 * Detection
 * Hosts
 
-  + Certificates
-  + ACLs / CAPs
-  + Mandatory / Role-based Access Controls
-  + Discretionary Access Controls
-  + Kernel config
+  + Certificates / Keys
+  + Mandatory / Role-based Access Controls (MAC / RBAC)
+  + Access Control Lists / Linux Capabilities (ACLs / CAPs)
+  + Discretionary Access Controls (DAC)
+  + Kernel config / Toolchain
 
     - **PaX**
     - **PIE / SSP**
@@ -156,7 +156,7 @@ Old PaX used ELF program header markings, whereas new PaX prefers filesystem ext
 What Exactly is PaX?
 ====================
 
-PaX is a patch to the Linux kernel that provides additional hardening in three important ways:
+PaX was originally a patch to the Linux kernel that provided additional hardening in three important ways:
 
 1. Judicious enforcement of non-executable memory
 
@@ -178,6 +178,18 @@ PaX is a patch to the Linux kernel that provides additional hardening in three i
    integer counters, enforcing the size on copies between kernel and user land,
    and providing extra entropy. 
 
+PaX In The Mainline Kernel (as of 4.17+)
+========================================
+
+Various bits of the last "open source" version of the PaX kernel patch have been making it into the mainline kernel over the last few years (as each specific subset goes through the normal kernel review process). Many of the core options have already been merged, and more are currently under review.
+
+In the following slides, the specific PaX options listed show  (yes)\ ``*`` where there is a roughly corresponding mainline feature.  Alex Popov has prepared a diagram (`available on github`_) for a better and more visual representation.  The full graphic is too high a resolution for one slide, so only a screen shot is shown below:
+
+.. image:: images/Screenshot_linux-kernel-defense.png
+   :align: center
+   :width: 55%
+
+
 PaX Kernel Options - NOEXEC Features
 ====================================
 
@@ -186,15 +198,15 @@ PaX Kernel Options - NOEXEC Features
 
    * - **PAX_NOEXEC**
      - This option enables the protection of allocated pages of memory as non-executable if they are not part of the text segment of the running process. It is needed for PAGEEXEC, SEGMEXEC, and KERNEXEC.
-   * - **PAGEEXEC**
+   * - **PAGEEXEC** (yes)\ ``*``
      -  The kernel will protect non-executable pages based on the paging feature of the CPU. This is sometimes called "marking pages with the NX bit" in other OSes.
    * - **SEGMEXEC**
      - This is like PAGEEXEC, but based on the segmentation feature of the CPU and it is controlled by the PaX -S and -s flags (only on x86).
    * - **EMUTRAMP**
      - The kernel will emulate trampolines (snippets of executable code written on the fly) for processes that need them, e.g. nested functions in C and some JIT compilers.
-   * - **MPROTECT**
+   * - **MPROTECT** (yes)\ ``*``
      - The kernel will prevent the introduction of new executable pages into the running process by various techniques.
-   * - **KERNEXEC**
+   * - **KERNEXEC** (yes)\ ``*``
      - This is the kernel land equivalent of PAGEEXEC and MPROTECT. It cannot be disabled while the kernel is running. 
 
 PaX Kernel Options - ASLR Features
@@ -203,11 +215,11 @@ PaX Kernel Options - ASLR Features
 .. list-table::
    :widths: 21 51
 
-   * - **PAX_ASLR**
+   * - **PAX_ASLR** (yes)\ ``*``
      - The kernel will expand the number of randomized bits for the various section of the address space. This option is needed for RANDMMAP, RANDKSTACK, and RANDUSTACK.
    * - **RANDMMAP**
      - The kernel will use a randomized base address for mmap() requests that do not specify one via the MAP_FIXED variable. It is controlled by the PaX -R and -r flags.
-   * - **RANDKSTACK**
+   * - **RANDKSTACK** (yes)\ ``*``
      - The kernel will randomize every task's kernel stack on all system calls. It cannot be disable while the kernel is running.
    * - **RANDUSTACK**
      - The kernel will randomize every task's userland stack. This feature can be controlled on a per ELF binary basis by the PaX -R and -r flags.
@@ -218,17 +230,17 @@ PaX Kernel Options - Misc Features
 .. list-table::
    :widths: 21 51
 
-   * - **STACKLEAK**
+   * - **STACKLEAK** (yes)\ ``*``
      - The kernel will erase its stack before it returns from a system call. This feature cannot be disabled while the kernel is running.
    * - **UDEREF**
      - The kernel will not de-reference userland pointers in contexts where it expects only kernel pointers. This feature cannot be disabled while the kernel is running.
-   * - **REFCOUNT**
+   * - **REFCOUNT** (yes)\ ``*``
      - The kernel will detect and prevent overflowing various (but not all) kinds of object reference counters.
-   * - **USERCOPY**
+   * - **USERCOPY** (yes)\ ``*``
      - The kernel will enforce the size of heap objects when they are copied in either direction between the kernel and userland.
    * - **SIZE_OVERFLOW**
      - The kernel recomputes expressions of function arguments marked by a size_overflow attribute with double integer precision.
-   * - **LATENT_ENTROPY**
+   * - **LATENT_ENTROPY** (yes)\ ``*``
      - The kernel will use early boot code to generate extra entropy, which is especially useful on embedded systems. 
 
 Manipulating PaX Flags
@@ -288,31 +300,39 @@ Some packages may still have issues with BIND_NOW, and it has to be relaxed some
 Hardened Issues and The State of PaX
 ====================================
 
-PT_PAX flags are still valid (and the default) but are being phased out.
+If you're still running **hardened-sources** or similar:
 
-* Current version of binutils/bfd linker have been patched, but that patch will go away
-* The gold linker (required for LTO plugin) does not support PT_PAX
+* PT_PAX flags are still valid (and the default) but are being phased out.
 
-XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support).
+  - Current version of binutils/bfd linker have been patched, but that patch will go away
+- The gold linker (required for LTO plugin) does not support PT_PAX
 
-* Default PT flags will migrate to empty XT flags (since kernel falls back to default)
-* Only binaries with non-default flags will have XT flags marked
-* Libs needing less PaX enforcement will need their flags "back-ported" to the binaries that use it
+* XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support).
 
-Use cases such as a hardened build server may need config tweaks and/or twiddling of PaX flags on things like qemu binaries used during the build (eg, OpenEmbedded).
+  - Default PT flags will migrate to empty XT flags (since kernel falls back to default)
+  - Only binaries with non-default flags will have XT flags marked
+  - Libs needing less PaX enforcement will need their flags "back-ported" to the binaries that use it
+
+For running **gentoo-sources** or mainline:
+
+* The recent mainline kernel (4.17.x and higher) is where you should go for "PaX" hardening features in Gentoo now.  Some patches are still under review for later kernel releases, but many useful patches have already been ported to mainline and released.
+
+* A nice graphviz diagram showing the relationships between various kernel and hardware security features, as well as potential vulnerabilities and exploit techniques, is `available on github`_.
+
+.. _available on github: https://github.com/a13xp0p0v/linux-kernel-defence-map
 
 Where Can I Get Some PaX?
 =========================
 
-Gentoo's hardened-sources come with the Grsecurity (http://grsecurity.net/) patches, which bundle the PaX patches.
+Gentoo's hardened-sources are no longer maintained, as the PaX patches are no longer publicly available.  The remaining (Gentoo) hardening patches for the kernel are in the gentoo-sources package (and toolchain). Be sure and get the latest version available:
 
 ::
 
-  # emerge --ask sys-kernel/hardened-sources
+  # emerge --ask sys-kernel/gentoo-sources
 
 **Gentoo Linux**
 
-  - Select the desired hardened profile, including a MAC framework (eg, SELinux, Grsec, SMACK) and rebuild your kernel, then your toolchain.  See the Hardened Project `SELinux Guide`_, the `RSBAC Guide`_, or the `Grsecurity Quickstart`_ for more information.
+  - Select the desired hardened profile, including a MAC framework (eg, SELinux, Tomoyo, SMACK, etc) and rebuild your kernel, then your toolchain.  See the Hardened Project `SELinux Guide`_, the `RSBAC Guide`_, or the `Grsecurity Quickstart`_ for more information.
 
 **Other Linux**
 
@@ -345,6 +365,7 @@ Gentoo Hardened Subproject Starters
 
 Other Resources
 
+* https://github.com/a13xp0p0v/linux-kernel-defence-map
 * http://pax.grsecurity.net/
 * http://en.wikipedia.org/wiki/NX_bit
 * http://people.redhat.com/drepper/dsohowto.pdf
@@ -379,16 +400,17 @@ License and Thanks!
 :Author: Stephen L Arnold
 :FOSS Hat: Gentoo Linux Developer
 :Contact: answers@vctlabs.com
-:Revision: 0.2
+:Revision: 0.3
 :Date: |date|, |time| PST8PDT
 :License: `CC-Attribution-ShareAlike`_
-:Copyright: 2016 `VCT Labs, Inc.`_,
+:Copyright: 2016 `VCT Labs, Inc.`_ and 2018 `Orchard Systems, Inc.`_
 
 Gentoo is a trademark of `Gentoo Foundation, Inc`_.
-Portions Copyright 2001–2016 `Gentoo Foundation, Inc`_.
+Portions Copyright 2001–2018 `Gentoo Foundation, Inc`_.
 
 .. _CC-Attribution-ShareAlike: http://creativecommons.org/licenses/by-sa/3.0/
 .. _VCT Labs, Inc.: http://www.vctlabs.com
+.. _Orchard Systems, Inc.: http://www.orchardsystems.com
 .. _Gentoo Foundation, Inc: https://www.gentoo.org/
 
 .. raw:: pdf
