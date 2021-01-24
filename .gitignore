@@ -1,7 +1,5 @@
-drones/*.pdf
-drones/images/overview.svg
-drones/images/navigation.svg
+foss-instrumentation/*.pdf
+foss-instrumentation/images/*.svg
 
 hardened/*.pdf
-hardened/images/overview.svg
-hardened/images/navigation.svg
+hardened/images/*.svg

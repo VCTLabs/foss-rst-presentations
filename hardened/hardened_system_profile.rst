@@ -305,7 +305,7 @@ If you're still running **hardened-sources** or similar:
 * PT_PAX flags are still valid (and the default) but are being phased out.
 
   - Current version of binutils/bfd linker have been patched, but that patch will go away
-- The gold linker (required for LTO plugin) does not support PT_PAX
+  - The gold linker (required for LTO plugin) does not support PT_PAX
 
 * XT_PAX migrate script should be used as soon as possible (and disable PT_PAX support).
 
